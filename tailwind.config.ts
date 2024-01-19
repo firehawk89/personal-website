@@ -11,13 +11,15 @@ const config: Config = {
       fontFamily: {
         text: 'var(--font-text)',
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      colors: {
+        light: '#fff',
+        dark: '#1a1a1a',
+        gray: '#f5f5f5',
+        accent: '#ff5100',
       },
     },
   },
   plugins: [],
 }
+
 export default config
