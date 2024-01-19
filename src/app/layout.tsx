@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import Header from '@/components/Header/Header'
+import { classnames } from '@/utils'
 import { raleway } from './fonts'
-
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -15,7 +16,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={raleway.className}>{children}</body>
+      <body
+        className={classnames('min-h-screen flex flex-col', raleway.className)}
+      >
+        <Header />
+        <main className="flex-grow flex-shrink basis-0">{children}</main>
+        <div>11111</div>
+      </body>
     </html>
   )
 }
