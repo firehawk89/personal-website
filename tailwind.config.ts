@@ -29,14 +29,14 @@ const config: Config = {
           '100%': { top: '0', transform: 'rotate(0)' },
         },
         'bottom-down': {
-          '0%': { bottom: '0', transform: 'rotate(0)' },
-          '50%': { bottom: '10px', transform: 'rotate(0)' },
-          '100%': { bottom: '10px', transform: 'rotate(135deg)' },
-        },
-        'bottom-up': {
           '0%': { bottom: '10px', transform: 'rotate(135deg)' },
           '50%': { bottom: '10px', transform: 'rotate(0)' },
           '100%': { bottom: '0', transform: 'rotate(0)' },
+        },
+        'bottom-up': {
+          '0%': { bottom: '0', transform: 'rotate(0)' },
+          '50%': { bottom: '10px', transform: 'rotate(0)' },
+          '100%': { bottom: '10px', transform: 'rotate(135deg)' },
         },
         scaled: {
           '0%': { transform: 'scale(0)' },
