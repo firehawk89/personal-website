@@ -10,6 +10,10 @@ body {
   @apply text-dark;
 }
 
+.no-scroll {
+  @apply overflow-hidden;
+}
+
 .menu-icon {
   @apply before:absolute before:top-0 before:left-0 before:h-0.5 after:h-0.5;
 }
