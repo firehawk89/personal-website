@@ -11,12 +11,10 @@ type HeaderProps = {
 const Header: FC<HeaderProps> = ({ className }) => {
   return (
     <header
-      className={
-        (classnames(
-          'px-8 lg:px-10 py-4 lg:py-6 fixed top-0 left-0 w-full bg-gray'
-        ),
-        className)
-      }
+      className={classnames(
+        'px-8 lg:px-10 py-4 lg:py-6 fixed top-0 left-0 w-full bg-gray',
+        className
+      )}
     >
       <Menu className="mx-auto">
         <MenuItem href="/">Home</MenuItem>
@@ -24,7 +22,7 @@ const Header: FC<HeaderProps> = ({ className }) => {
         <MenuItem href="/#my-projects">My Projects</MenuItem>
         <MenuItem href="/#contact-me">Contact Me</MenuItem>
       </Menu>
-      <MenuIcon />
+      <MenuIcon className="md:hidden ml-auto" />
     </header>
   )
 }
