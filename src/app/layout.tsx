@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import Header from '@/components/Header/Header'
+import Providers from '@/store/Providers'
 import { classnames } from '@/utils'
+import Header from '@/components/Header/Header'
 import { raleway } from './fonts'
 import './globals.css'
-import Providers from '@/store/Providers'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,7 +20,7 @@ export default function RootLayout({
       <html lang="en">
         <body
           className={classnames(
-            'min-h-screen flex flex-col',
+            'min-h-screen flex flex-col bg-gray',
             raleway.className
           )}
         >
