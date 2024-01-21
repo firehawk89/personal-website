@@ -11,7 +11,7 @@ const MenuItem: FC<MenuItemProps> = ({ children, className, href }) => {
   return (
     <li className={className}>
       <Link
-        className="text-lg lg:text-xl font-medium uppercase md:hover:text-accent transition-colors"
+        className="text-lg font-medium uppercase md:hover:text-accent transition-colors"
         href={href}
       >
         {children}
