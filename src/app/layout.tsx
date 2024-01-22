@@ -20,7 +20,7 @@ export default function RootLayout({
       <html lang="en">
         <body
           className={classnames(
-            'min-h-screen flex flex-col bg-gray',
+            'min-h-screen flex flex-col',
             raleway.className
           )}
         >
