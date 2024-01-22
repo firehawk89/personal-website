@@ -14,7 +14,7 @@ const config: Config = {
       colors: {
         light: '#fff',
         dark: '#1a1a1a',
-        gray: '#f5f5f5',
+        ghost: '#f7f7ff',
         accent: '#ff5100',
       },
       boxShadow: { blur: '0 4px 30px rgba(0, 0, 0, 0.1);' },
