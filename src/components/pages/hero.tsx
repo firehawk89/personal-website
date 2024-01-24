@@ -13,7 +13,7 @@ const Hero: FC = () => {
       <Content className="flex flex-col items-center justify-center text-center">
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold">
-            Hi, I'm <span className="text-accent">Anton Bochkovskyi</span>
+            Hi, I&apos;m <span className="text-accent">Anton Bochkovskyi</span>
           </h1>
           <p className="mt-4 md:text-xl font-medium">
             Motivated Junior Front-End Developer with a passion for creating
