@@ -2,8 +2,8 @@ import { FC } from 'react'
 import { classnames } from '@/utils'
 import Content from '@/components/UI/content'
 import styles from './Hero.module.css'
-import Button from '../UI/Button'
-import Socials from '../UI/Socials/Socials'
+import Button from '@/components/UI/Button'
+import Socials from '@/components/UI/Socials/Socials'
 
 const Hero: FC = () => {
   return (
