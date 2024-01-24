@@ -1,32 +1,32 @@
-import { FC, ReactNode } from 'react'
 import { classnames } from '@/utils'
 import Link from 'next/link'
+import { FC, ReactNode } from 'react'
 
-type ButtonVariant = 'solid' | 'outline'
+type ButtonVariant = 'outline' | 'solid'
 
 type ButtonProps = {
   children: ReactNode
   className?: string
-  type?: 'button' | 'submit' | 'reset'
   disabled?: boolean
-  variant?: ButtonVariant
   href?: string
   onClick?: () => void
+  type?: 'button' | 'reset' | 'submit'
+  variant?: ButtonVariant
 }
 
 const buttonStyles: Record<ButtonVariant, string> = {
-  solid: 'text-light bg-accent md:hover:bg-opacity-80',
   outline: 'text-accent bg-transparent md:hover:text-light md:hover:bg-accent',
+  solid: 'text-light bg-accent md:hover:bg-opacity-80',
 }
 
 const Button: FC<ButtonProps> = ({
   children,
   className,
-  type = 'button',
   disabled,
-  variant = 'solid',
   href,
   onClick,
+  type = 'button',
+  variant = 'solid',
 }) => {
   return (
     <>
@@ -48,9 +48,9 @@ const Button: FC<ButtonProps> = ({
             buttonStyles[variant],
             className
           )}
-          type={type}
           disabled={disabled}
           onClick={onClick}
+          type={type}
         >
           {children}
         </button>
