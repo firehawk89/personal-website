@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { classnames } from '@/utils'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
-import SocialsItem from './SocialsItem'
+import SocialsItem from './socials-item'
 
 type SocialsProps = {
   className?: string
