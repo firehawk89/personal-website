@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Providers from '@/store/providers'
 import { classnames } from '@/utils'
-import Header from '@/components/Header/header'
+import Header from '@/components/header/header'
 import { raleway } from './fonts'
 import './globals.css'
 
