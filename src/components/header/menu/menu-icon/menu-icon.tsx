@@ -1,9 +1,9 @@
 'use client'
 
 import { FC, useContext } from 'react'
-import HeaderContext from '@/store/header/header-context'
+import HeaderContext from '@/store/header-context'
 import { classnames } from '@/utils'
-import MenuIconBar from './MenuIconBar'
+import MenuIconBar from './menu-icon-bar'
 
 type MenuIconProps = {
   className?: string

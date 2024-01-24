@@ -1,5 +1,5 @@
 import { FC, ReactNode } from 'react'
-import HeaderProvider from './header/header-provider'
+import HeaderProvider from './header-provider'
 
 type ProvidersProps = { children: ReactNode }
 
