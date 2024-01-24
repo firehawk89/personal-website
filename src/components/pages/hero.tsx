@@ -1,7 +1,7 @@
 import { FC } from 'react'
 import { classnames } from '@/utils'
 import Content from '@/components/ui/content'
-import styles from './Hero.module.css'
+import styles from './hero.module.css'
 import Button from '@/components/ui/button'
 import Socials from '@/components/ui/socials/socials'
 
