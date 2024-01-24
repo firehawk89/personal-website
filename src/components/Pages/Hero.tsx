@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { classnames } from '@/utils'
-import Layout from '../UI/Layout'
+import Content from '@/components/UI/content'
 import styles from './Hero.module.css'
 import Button from '../UI/Button'
 import Socials from '../UI/Socials/Socials'
@@ -10,7 +10,7 @@ const Hero: FC = () => {
     <section
       className={classnames('relative bg-ghost', styles['hero-container'])}
     >
-      <Layout className="flex flex-col items-center justify-center text-center">
+      <Content className="flex flex-col items-center justify-center text-center">
         <div className="max-w-4xl">
           <h1 className="text-4xl md:text-5xl font-bold">
             Hi, I'm <span className="text-accent">Anton Bochkovskyi</span>
@@ -23,7 +23,7 @@ const Hero: FC = () => {
         <Button className="mt-5" variant="outline">
           My Work
         </Button>
-      </Layout>
+      </Content>
       <Socials className="absolute bottom-2.5 left-1/2 -translate-x-1/2" />
     </section>
   )
