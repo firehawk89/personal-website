@@ -1,7 +1,7 @@
 'use client'
 
 import { FC, ReactNode, useContext } from 'react'
-import HeaderContext from '@/store/header/header-context'
+import HeaderContext from '@/store/header-context'
 import { classnames } from '@/utils'
 
 type MenuProps = {

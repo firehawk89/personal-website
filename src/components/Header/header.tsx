@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { classnames } from '@/utils'
-import Menu from '@/components/Header/Menu/Menu'
+import Menu from '@/components/Header/Menu/menu'
 import MenuItem from './Menu/menu-item'
 import MenuIcon from './Menu/MenuIcon/menu-icon'
 
