@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "typescript:check": "tsc -p tsconfig.json",
     "eslint:check": "eslint .",
     "eslint:write": "eslint --fix .",
     "prettier:check": "prettier --check .",
