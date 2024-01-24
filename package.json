@@ -11,7 +11,8 @@
     "eslint:write": "eslint --fix .",
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write .",
-    "cspell": "cspell --show-suggestions --show-context --gitignore ."
+    "cspell": "cspell --show-suggestions --show-context --gitignore .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "next": "14.1.0",
@@ -28,6 +29,7 @@
     "eslint": "^8.56.0",
     "eslint-config-next": "14.1.0",
     "eslint-plugin-perfectionist": "^2.5.0",
+    "husky": "^8.0.3",
     "postcss": "^8",
     "prettier": "3.2.4",
     "tailwindcss": "^3.3.0",
