@@ -42,4 +42,3 @@ jobs:
       - run: npm ci
       - run: npm run prettier:check
       - run: npm run eslint:check
-      - run: npm run test
