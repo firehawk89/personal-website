@@ -1,8 +1,8 @@
 import { FC } from 'react'
 import { classnames } from '@/utils'
-import Menu from './Menu/Menu'
-import MenuItem from './Menu/MenuItem'
-import MenuIcon from './Menu/MenuIcon/MenuIcon'
+import Menu from '@/components/Header/Menu/Menu'
+import MenuItem from './Menu/menu-item'
+import MenuIcon from './Menu/MenuIcon/menu-icon'
 
 type HeaderProps = {
   className?: string
