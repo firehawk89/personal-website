@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  --header-height: 3.875rem;
+  --header-height: 3.375rem;
   @apply scroll-smooth;
 }
 
@@ -21,6 +21,6 @@ body {
 
 @media (min-width: theme('screens.md')) {
   html {
-    --header-height: 4.25rem;
+    --header-height: 3.75rem;
   }
 }
