@@ -13,7 +13,7 @@ const Header: FC<HeaderProps> = ({ className }) => {
   return (
     <header
       className={classnames(
-        'px-8 lg:px-10 py-5 fixed z-10 top-0 left-0 w-full bg-light bg-opacity-10 shadow-blur backdrop-blur-[8px]',
+        'px-8 lg:px-10 py-4 fixed z-10 top-0 left-0 w-full bg-light bg-opacity-10 shadow-blur backdrop-blur-[8px]',
         className
       )}
     >
