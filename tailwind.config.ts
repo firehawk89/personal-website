@@ -6,6 +6,7 @@ const config: Config = {
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  darkMode: 'class',
   plugins: [],
   theme: {
     extend: {
@@ -17,7 +18,7 @@ const config: Config = {
         'top-down': 'top-down 0.5s ease forwards',
         'top-up': 'top-up 0.5s ease forwards',
       },
-      boxShadow: { blur: '0 4px 30px rgba(0, 0, 0, 0.1);' },
+      boxShadow: { blur: '0 4px 30px rgba(0, 0, 0, 0.1)' },
       colors: {
         accent: '#ff5100',
         dark: '#1a1a1a',
