@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  @apply text-dark;
+  @apply text-dark dark:text-light;
 }
 
 .no-scroll {
@@ -16,7 +16,7 @@ body {
 }
 
 .menu-icon {
-  @apply before:absolute before:top-0 before:left-0 before:h-0.5 after:h-0.5;
+  @apply before:absolute before:left-0 before:top-0 before:h-0.5 after:h-0.5;
 }
 
 @media (min-width: theme('screens.md')) {
