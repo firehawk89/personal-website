@@ -28,7 +28,10 @@ const Hero: FC = () => {
           My Work
         </Button>
       </Content>
-      <Socials className="absolute bottom-2.5 left-1/2 -translate-x-1/2" />
+      <Socials
+        className="absolute bottom-8 left-8 md:hidden"
+        orientation="vertical"
+      />
     </section>
   )
 }

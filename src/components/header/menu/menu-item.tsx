@@ -1,5 +1,8 @@
+'use client'
+
+import HeaderContext from '@/store/header-context'
 import Link from 'next/link'
-import { FC, ReactNode } from 'react'
+import { FC, ReactNode, useContext } from 'react'
 
 type MenuItemProps = {
   children: ReactNode
@@ -8,8 +11,10 @@ type MenuItemProps = {
 }
 
 const MenuItem: FC<MenuItemProps> = ({ children, className, href }) => {
+  const { toggleMenu } = useContext(HeaderContext)
+
   return (
-    <li className={className}>
+    <li className={className} onClick={toggleMenu}>
       <Link
         className="text-lg font-medium uppercase transition-colors md:hover:text-accent"
         href={href}

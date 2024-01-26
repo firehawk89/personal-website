@@ -20,7 +20,7 @@ const ThemeToggler: FC<ThemeTogglerProps> = ({ className }) => {
   if (!mounted) {
     return (
       <Button className={className} variant="icon">
-        <div className="h-6 w-6 animate-pulse rounded-full bg-gray-200 dark:bg-gray-600" />
+        <div className="h-6 w-6 animate-pulse rounded-full bg-gray-200 dark:bg-zinc-700" />
       </Button>
     )
   }

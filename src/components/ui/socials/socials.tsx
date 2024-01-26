@@ -5,11 +5,18 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
 type SocialsProps = {
   className?: string
+  orientation?: 'horizontal' | 'vertical'
 }
 
-const Socials: FC<SocialsProps> = ({ className }) => {
+const Socials: FC<SocialsProps> = ({ className, orientation }) => {
   return (
-    <ul className={classnames('flex gap-8 p-5', className)}>
+    <ul
+      className={classnames(
+        'flex gap-5',
+        orientation === 'vertical' ? 'flex-col' : 'flex-row',
+        className
+      )}
+    >
       <SocialsItem
         Icon={FaLinkedin}
         href="https://www.linkedin.com/in/anton-bochkovskyi/"
