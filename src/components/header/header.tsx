@@ -1,10 +1,11 @@
-import Menu from '@/components/header/menu/menu'
+'use client'
+
+import HeaderNavbar from '@/components/header/header-navbar'
 import ThemeToggler from '@/components/ui/theme-toggler'
 import { classnames } from '@/utils'
 import { FC } from 'react'
 
 import MenuIcon from './menu/menu-icon/menu-icon'
-import MenuItem from './menu/menu-item'
 
 type HeaderProps = {
   className?: string
@@ -18,12 +19,8 @@ const Header: FC<HeaderProps> = ({ className }) => {
         className
       )}
     >
-      <Menu className="mx-auto">
-        <MenuItem href="/#about-me">About Me</MenuItem>
-        <MenuItem href="/#my-projects">My Work</MenuItem>
-        <MenuItem href="/#contact-me">Contact Me</MenuItem>
-      </Menu>
-      <div className="flex items-center justify-between">
+      <HeaderNavbar />
+      <div className="relative z-30 flex items-center justify-between md:static">
         <ThemeToggler className="-m-2 md:absolute md:right-10 md:top-1/2 md:m-0 md:-translate-y-1/2" />
         <MenuIcon className="md:hidden" />
       </div>
