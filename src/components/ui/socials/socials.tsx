@@ -10,12 +10,16 @@ type SocialsProps = {
 const Socials: FC<SocialsProps> = ({ className }) => {
   return (
     <ul className={classnames('p-5 flex gap-8', className)}>
-      <SocialsItem href="https://www.linkedin.com/in/anton-bochkovskyi/">
-        <FaLinkedin />
-      </SocialsItem>
-      <SocialsItem href="https://github.com/firehawk89">
-        <FaGithub />
-      </SocialsItem>
+      <SocialsItem
+        Icon={FaLinkedin}
+        href="https://www.linkedin.com/in/anton-bochkovskyi/"
+        title="LinkedIn"
+      />
+      <SocialsItem
+        Icon={FaGithub}
+        href="https://github.com/firehawk89"
+        title="GitHub"
+      />
     </ul>
   )
 }
