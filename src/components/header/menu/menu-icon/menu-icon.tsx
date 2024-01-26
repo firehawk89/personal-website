@@ -15,7 +15,10 @@ const MenuIcon: FC<MenuIconProps> = ({ className }) => {
 
   return (
     <div
-      className={classnames('relative z-30 h-5 w-7 cursor-pointer', className)}
+      className={classnames(
+        'relative h-5 w-7 cursor-pointer md:static',
+        className
+      )}
       onClick={toggleMenu}
     >
       <MenuIconBar
