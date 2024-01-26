@@ -9,7 +9,10 @@ import styles from './hero.module.css'
 const Hero: FC = () => {
   return (
     <section
-      className={classnames('relative bg-ghost', styles['hero-container'])}
+      className={classnames(
+        'relative bg-ghost dark:bg-dark',
+        styles['hero-container']
+      )}
     >
       <Content className="flex flex-col items-center justify-center text-center">
         <div className="max-w-4xl">
