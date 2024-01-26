@@ -1,5 +1,3 @@
-'use client'
-
 import HeaderNavbar from '@/components/header/header-navbar'
 import ThemeToggler from '@/components/ui/theme-toggler'
 import { classnames } from '@/utils'
