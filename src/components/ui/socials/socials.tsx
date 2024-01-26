@@ -9,7 +9,7 @@ type SocialsProps = {
 
 const Socials: FC<SocialsProps> = ({ className }) => {
   return (
-    <ul className={classnames('p-5 flex gap-8', className)}>
+    <ul className={classnames('flex gap-8 p-5', className)}>
       <SocialsItem
         Icon={FaLinkedin}
         href="https://www.linkedin.com/in/anton-bochkovskyi/"

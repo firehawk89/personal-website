@@ -20,11 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={classnames('min-h-screen flex flex-col', raleway.className)}
+        className={classnames('flex min-h-screen flex-col', raleway.className)}
       >
         <Providers>
           <Header />
-          <main className="flex-grow flex-shrink basis-0">{children}</main>
+          <main className="flex-shrink flex-grow basis-0">{children}</main>
           <div>11111</div>
         </Providers>
       </body>

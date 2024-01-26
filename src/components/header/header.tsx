@@ -14,7 +14,7 @@ const Header: FC<HeaderProps> = ({ className }) => {
   return (
     <header
       className={classnames(
-        'px-8 lg:px-10 py-4 fixed z-10 top-0 left-0 w-full bg-light bg-opacity-10 shadow-blur backdrop-blur-[8px]',
+        'fixed left-0 top-0 z-10 w-full bg-light bg-opacity-10 px-8 py-4 shadow-blur backdrop-blur-[8px] lg:px-10',
         className
       )}
     >
@@ -23,8 +23,8 @@ const Header: FC<HeaderProps> = ({ className }) => {
         <MenuItem href="/#my-projects">My Work</MenuItem>
         <MenuItem href="/#contact-me">Contact Me</MenuItem>
       </Menu>
-      <div className="flex justify-between items-center">
-        <ThemeToggler className="-m-2 md:m-0 md:absolute md:top-1/2 md:-translate-y-1/2 md:right-10" />
+      <div className="flex items-center justify-between">
+        <ThemeToggler className="-m-2 md:absolute md:right-10 md:top-1/2 md:m-0 md:-translate-y-1/2" />
         <MenuIcon className="md:hidden" />
       </div>
     </header>
