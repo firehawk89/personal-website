@@ -1,4 +1,5 @@
 import Menu from '@/components/header/menu/menu'
+import ThemeToggler from '@/components/ui/theme-toggler'
 import { classnames } from '@/utils'
 import { FC } from 'react'
 
@@ -22,7 +23,10 @@ const Header: FC<HeaderProps> = ({ className }) => {
         <MenuItem href="/#my-projects">My Work</MenuItem>
         <MenuItem href="/#contact-me">Contact Me</MenuItem>
       </Menu>
-      <MenuIcon className="md:hidden ml-auto" />
+      <div className="flex justify-between items-center">
+        <ThemeToggler className="-m-2 md:m-0 md:absolute md:top-1/2 md:-translate-y-1/2 md:right-10" />
+        <MenuIcon className="md:hidden" />
+      </div>
     </header>
   )
 }
