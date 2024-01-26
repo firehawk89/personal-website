@@ -1,0 +1,4 @@
+.hero-container {
+  margin-top: var(--header-height);
+  height: calc(100dvh - var(--header-height));
+}
