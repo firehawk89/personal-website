@@ -3,8 +3,11 @@ import Link from 'next/link'
 import { FC, ReactNode } from 'react'
 
 const buttonVariants = {
-  outline: 'text-accent bg-transparent md:hover:text-light md:hover:bg-accent',
-  solid: 'text-light bg-accent md:hover:bg-opacity-80',
+  icon: 'p-2 bg-transparent md:hover:text-accent',
+  outline:
+    'px-5 py-2 rounded-md border-2 border-accent text-accent bg-transparent md:hover:text-light md:hover:bg-accent',
+  solid:
+    'px-5 py-2 rounded-md border-2 border-accent text-light bg-accent md:hover:bg-opacity-80',
 }
 
 type ButtonProps = {
@@ -31,7 +34,7 @@ const Button: FC<ButtonProps> = ({
       {href ? (
         <Link
           className={classnames(
-            'px-5 py-2 rounded-md border-2 border-accent text-lg font-medium transition-all active:scale-95',
+            'md:text-lg font-medium transition-all active:scale-95',
             buttonVariants[variant],
             className
           )}
@@ -42,7 +45,7 @@ const Button: FC<ButtonProps> = ({
       ) : (
         <button
           className={classnames(
-            'px-5 py-2 rounded-md border-2 border-accent md:text-lg font-medium transition-all active:scale-95',
+            'md:text-lg font-medium transition-all active:scale-95',
             buttonVariants[variant],
             className
           )}
