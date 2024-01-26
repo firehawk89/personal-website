@@ -11,7 +11,7 @@ const SocialsItem: FC<SocialsItemProps> = ({ children, className, href }) => {
   return (
     <li className={className}>
       <Link
-        className="text-3xl md:text-4xl hover:text-accent transition-colors"
+        className="hover:text-accent transition-colors"
         href={href}
         target="_blank"
       >
