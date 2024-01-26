@@ -1,21 +1,29 @@
 import Link from 'next/link'
-import { FC, ReactNode } from 'react'
+import { ComponentType, FC } from 'react'
+import { IconBaseProps } from 'react-icons'
 
 type SocialsItemProps = {
-  children: ReactNode
+  Icon: ComponentType<IconBaseProps>
   className?: string
   href: string
+  title: string
 }
 
-const SocialsItem: FC<SocialsItemProps> = ({ children, className, href }) => {
+const SocialsItem: FC<SocialsItemProps> = ({
+  Icon,
+  className,
+  href,
+  title,
+}) => {
   return (
     <li className={className}>
       <Link
-        className="text-3xl md:text-4xl hover:text-accent transition-colors"
+        className="transition-colors hover:text-accent"
         href={href}
         target="_blank"
       >
-        {children}
+        <Icon aria-hidden="true" className="h-8 w-8" focusable="false" />
+        <span className="sr-only">{title}</span>
       </Link>
     </li>
   )

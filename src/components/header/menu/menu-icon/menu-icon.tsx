@@ -15,20 +15,26 @@ const MenuIcon: FC<MenuIconProps> = ({ className }) => {
 
   return (
     <div
-      className={classnames(
-        'cursor-pointer relative z-30 w-7 flex flex-col gap-2',
-        className
-      )}
+      className={classnames('relative z-30 h-5 w-7 cursor-pointer', className)}
       onClick={toggleMenu}
     >
       <MenuIconBar
-        className={isMenuOpened ? 'animate-top-down' : 'animate-top-up'}
+        className={classnames(
+          isMenuOpened ? 'top-1/2 -translate-y-1/2 rotate-45' : 'top-0'
+        )}
       />
       <MenuIconBar
-        className={isMenuOpened ? 'animate-scaled-none' : 'animate-scaled'}
+        className={classnames(
+          'top-1/2 -translate-y-1/2',
+          isMenuOpened && 'opacity-0'
+        )}
       />
       <MenuIconBar
-        className={isMenuOpened ? 'animate-bottom-up' : 'animate-bottom-down'}
+        className={classnames(
+          isMenuOpened
+            ? 'top-1/2 -translate-y-1/2 -rotate-45'
+            : 'top-full -translate-y-full'
+        )}
       />
     </div>
   )
