@@ -1,6 +1,6 @@
-export const classnames = (
-  ...names: (boolean | null | number | string | undefined)[]
-): string => {
-  const validNames = names.filter((n): n is string => typeof n === 'string')
-  return validNames.join(' ')
+import { type ClassValue, clsx } from 'clsx'
+import { twMerge } from 'tailwind-merge'
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs))
 }
