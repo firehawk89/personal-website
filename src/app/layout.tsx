@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 
 import Header from '@/components/header/header'
 import Providers from '@/store/providers'
-import { classnames } from '@/utils'
+import { cn } from '@/utils'
 
 import { raleway } from './fonts'
 import './globals.css'
@@ -19,9 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={classnames('flex min-h-screen flex-col', raleway.className)}
-      >
+      <body className={cn('flex min-h-screen flex-col', raleway.className)}>
         <Providers>
           <Header />
           <main className="flex-shrink flex-grow basis-0">{children}</main>

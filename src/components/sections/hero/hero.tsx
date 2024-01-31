@@ -1,7 +1,7 @@
 import Button from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Socials from '@/components/ui/socials/socials'
-import { classnames } from '@/utils'
+import { cn } from '@/utils'
 import { FC } from 'react'
 
 import styles from './hero.module.css'
@@ -9,10 +9,7 @@ import styles from './hero.module.css'
 const Hero: FC = () => {
   return (
     <section
-      className={classnames(
-        'relative bg-ghost dark:bg-dark',
-        styles['hero-container']
-      )}
+      className={cn('relative bg-ghost dark:bg-dark', styles['hero-container'])}
     >
       <Content className="flex flex-col items-center justify-center text-center">
         <div className="max-w-4xl">

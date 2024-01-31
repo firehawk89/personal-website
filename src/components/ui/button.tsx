@@ -1,4 +1,4 @@
-import { classnames } from '@/utils'
+import { cn } from '@/utils'
 import Link from 'next/link'
 import { FC, ReactNode } from 'react'
 
@@ -33,7 +33,7 @@ const Button: FC<ButtonProps> = ({
     <>
       {href ? (
         <Link
-          className={classnames(
+          className={cn(
             'font-medium transition-all active:scale-95 md:text-lg',
             buttonVariants[variant],
             className
@@ -44,7 +44,7 @@ const Button: FC<ButtonProps> = ({
         </Link>
       ) : (
         <button
-          className={classnames(
+          className={cn(
             'font-medium transition-all active:scale-95 md:text-lg',
             buttonVariants[variant],
             className
