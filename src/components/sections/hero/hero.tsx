@@ -12,21 +12,21 @@ const Hero: FC = () => {
       className={cn('relative bg-ghost dark:bg-dark', styles['hero-container'])}
     >
       <Content className="flex flex-col items-center justify-center text-center">
-        <div className="max-w-4xl">
+        <article className="max-w-4xl">
           <h1 className="text-4xl font-bold md:text-5xl">
             Hi, I&apos;m <span className="text-accent">Anton Bochkovskyi</span>
           </h1>
           <p className="mt-4 font-medium md:text-xl">
-            Motivated Junior Front-End Developer with a passion for creating
-            engaging, elegant and responsive user interfaces.
+            Motivated Front-End Developer with a passion for creating engaging,
+            elegant and responsive user interfaces.
           </p>
-        </div>
+        </article>
         <Button className="mt-5" variant="outline">
           My Work
         </Button>
       </Content>
       <Socials
-        className="absolute bottom-8 left-8 md:hidden"
+        className="absolute bottom-8 left-8 hidden md:flex"
         orientation="vertical"
       />
     </section>
