@@ -1,15 +1,16 @@
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
+import Technologies from '@/components/ui/technologies/technologies'
 import { cn } from '@/utils'
 import { FC } from 'react'
 
 const About: FC = () => {
   return (
     <section
-      className={cn('bg-light py-14 dark:bg-black md:py-20')}
+      className={cn('bg-light py-12 dark:bg-black md:py-20')}
       id="about-me"
     >
-      <Content className="flex flex-col items-center justify-center">
+      <Content className="flex gap-6 md:gap-10">
         <article>
           <Heading size="h2" variant="underline">
             About Me
@@ -37,7 +38,7 @@ const About: FC = () => {
             </p>
           </div>
         </article>
-        <div></div>
+        <Technologies className="self-start" />
       </Content>
     </section>
   )
