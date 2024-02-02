@@ -1,14 +1,30 @@
 import { cn } from '@/utils'
+import { cva } from 'class-variance-authority'
 import Link from 'next/link'
 import { FC, ReactNode } from 'react'
 
-const buttonVariants = {
-  icon: 'bg-transparent p-2 md:hover:text-accent',
-  outline:
-    'rounded-md border-2 border-accent bg-transparent px-5 py-2 text-accent md:hover:bg-accent md:hover:text-light',
-  solid:
-    'rounded-md border-2 border-accent bg-accent px-5 py-2 text-light md:hover:bg-opacity-80',
-}
+const buttonVariants = cva(
+  'font-medium transition-all active:scale-95 md:text-lg',
+  {
+    defaultVariants: {
+      size: 'md',
+      variant: 'solid',
+    },
+    variants: {
+      size: {
+        md: 'py-2 px-5 rounded-md',
+        sm: 'p-2',
+      },
+      variant: {
+        icon: 'bg-transparent md:hover:text-accent',
+        outline:
+          'border-2 border-accent bg-transparent text-accent md:hover:bg-accent md:hover:text-light',
+        solid:
+          'border-2 border-accent bg-accent text-light md:hover:bg-opacity-80',
+      },
+    },
+  }
+)
 
 type ButtonProps = {
   children: ReactNode
@@ -34,8 +50,7 @@ const Button: FC<ButtonProps> = ({
       {href ? (
         <Link
           className={cn(
-            'font-medium transition-all active:scale-95 md:text-lg',
-            buttonVariants[variant],
+            // buttonVariants[variant],
             className
           )}
           href={href}
@@ -45,8 +60,7 @@ const Button: FC<ButtonProps> = ({
       ) : (
         <button
           className={cn(
-            'font-medium transition-all active:scale-95 md:text-lg',
-            buttonVariants[variant],
+            // buttonVariants[variant],
             className
           )}
           disabled={disabled}
