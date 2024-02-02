@@ -1,3 +1,5 @@
 raleway
 Bochkovskyi
 clsx
+Nextdotjs
+Tailwindcss
