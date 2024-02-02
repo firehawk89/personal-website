@@ -33,14 +33,14 @@ const ThemeToggler: FC<ThemeTogglerProps> = ({ className }) => {
         </Button>
       ) : (
         <Button className={className} onClick={toggleTheme} variant="icon">
-          {
-            // TODO: Add sr-only text
-          }
           {isDarkTheme ? (
             <CiDark className="h-6 w-6" />
           ) : (
             <CiLight className="h-6 w-6" />
           )}
+          <span className="sr-only">
+            {isDarkTheme ? 'Toggle light theme' : 'Toggle dark theme'}
+          </span>
         </Button>
       )}
     </>
