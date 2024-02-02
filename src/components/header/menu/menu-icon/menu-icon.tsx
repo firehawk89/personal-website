@@ -1,7 +1,7 @@
 'use client'
 
 import HeaderContext from '@/store/header-context'
-import { classnames } from '@/utils'
+import { cn } from '@/utils'
 import { FC, useContext } from 'react'
 
 import MenuIconBar from './menu-icon-bar'
@@ -15,25 +15,19 @@ const MenuIcon: FC<MenuIconProps> = ({ className }) => {
 
   return (
     <div
-      className={classnames(
-        'relative h-5 w-7 cursor-pointer md:static',
-        className
-      )}
+      className={cn('relative h-5 w-7 cursor-pointer md:static', className)}
       onClick={toggleMenu}
     >
       <MenuIconBar
-        className={classnames(
+        className={cn(
           isMenuOpened ? 'top-1/2 -translate-y-1/2 rotate-45' : 'top-0'
         )}
       />
       <MenuIconBar
-        className={classnames(
-          'top-1/2 -translate-y-1/2',
-          isMenuOpened && 'opacity-0'
-        )}
+        className={cn('top-1/2 -translate-y-1/2', isMenuOpened && 'opacity-0')}
       />
       <MenuIconBar
-        className={classnames(
+        className={cn(
           isMenuOpened
             ? 'top-1/2 -translate-y-1/2 -rotate-45'
             : 'top-full -translate-y-full'

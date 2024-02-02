@@ -26,13 +26,24 @@ const ThemeToggler: FC<ThemeTogglerProps> = ({ className }) => {
   }
 
   return (
-    <Button className={className} onClick={toggleTheme} variant="icon">
-      {isDarkTheme ? (
-        <CiDark className="h-6 w-6" />
+    <>
+      {!mounted ? (
+        <Button className={className} variant="icon">
+          <div className="h-6 w-6 animate-pulse rounded-full bg-gray-200 dark:bg-zinc-700" />
+        </Button>
       ) : (
-        <CiLight className="h-6 w-6" />
+        <Button className={className} onClick={toggleTheme} variant="icon">
+          {isDarkTheme ? (
+            <CiDark className="h-6 w-6" />
+          ) : (
+            <CiLight className="h-6 w-6" />
+          )}
+          <span className="sr-only">
+            {isDarkTheme ? 'Toggle light theme' : 'Toggle dark theme'}
+          </span>
+        </Button>
       )}
-    </Button>
+    </>
   )
 }
 

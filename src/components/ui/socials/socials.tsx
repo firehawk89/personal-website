@@ -1,5 +1,5 @@
 import SocialsItem from '@/components/ui/socials/socials-item'
-import { classnames } from '@/utils'
+import { cn } from '@/utils'
 import { FC } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
@@ -11,7 +11,7 @@ type SocialsProps = {
 const Socials: FC<SocialsProps> = ({ className, orientation }) => {
   return (
     <ul
-      className={classnames(
+      className={cn(
         'flex gap-5',
         orientation === 'vertical' ? 'flex-col' : 'flex-row',
         className

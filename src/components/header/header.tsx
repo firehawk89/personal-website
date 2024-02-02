@@ -1,6 +1,6 @@
 import HeaderNavbar from '@/components/header/header-navbar'
 import ThemeToggler from '@/components/ui/theme-toggler'
-import { classnames } from '@/utils'
+import { cn } from '@/utils'
 import { FC } from 'react'
 
 import MenuIcon from './menu/menu-icon/menu-icon'
@@ -12,7 +12,7 @@ type HeaderProps = {
 const Header: FC<HeaderProps> = ({ className }) => {
   return (
     <header
-      className={classnames(
+      className={cn(
         'fixed left-0 top-0 z-10 w-full bg-light bg-opacity-10 px-8 py-4 shadow-blur backdrop-blur-[8px] lg:px-10',
         className
       )}

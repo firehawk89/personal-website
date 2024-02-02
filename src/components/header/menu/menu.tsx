@@ -1,4 +1,4 @@
-import { classnames } from '@/utils'
+import { cn } from '@/utils'
 import { FC, ReactNode } from 'react'
 
 type MenuProps = {
@@ -10,7 +10,7 @@ type MenuProps = {
 const Menu: FC<MenuProps> = ({ children, className, orientation }) => {
   return (
     <ul
-      className={classnames(
+      className={cn(
         'flex w-fit items-center justify-stretch bg-transparent',
         orientation === 'vertical' ? 'flex-col gap-6' : 'flex-row gap-10',
         className
