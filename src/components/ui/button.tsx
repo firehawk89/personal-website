@@ -1,76 +1,48 @@
 import { cn } from '@/utils'
-import { cva } from 'class-variance-authority'
-import Link from 'next/link'
-import { FC, ReactNode } from 'react'
+import { VariantProps, cva } from 'class-variance-authority'
+import { ButtonHTMLAttributes, FC } from 'react'
 
-const buttonVariants = cva(
+export const buttonVariants = cva(
   'font-medium transition-all active:scale-95 md:text-lg',
   {
     defaultVariants: {
-      size: 'md',
-      variant: 'solid',
+      size: 'default',
+      variant: 'default',
     },
     variants: {
       size: {
-        md: 'py-2 px-5 rounded-md',
+        default: 'py-2 px-5 rounded-md',
         sm: 'p-2',
       },
       variant: {
+        default:
+          'border-2 border-accent bg-accent text-light md:hover:bg-opacity-80',
         icon: 'bg-transparent md:hover:text-accent',
         outline:
           'border-2 border-accent bg-transparent text-accent md:hover:bg-accent md:hover:text-light',
-        solid:
-          'border-2 border-accent bg-accent text-light md:hover:bg-opacity-80',
       },
     },
   }
 )
 
-type ButtonProps = {
-  children: ReactNode
-  className?: string
-  disabled?: boolean
-  href?: string
-  onClick?: () => void
-  type?: 'button' | 'reset' | 'submit'
-  variant?: keyof typeof buttonVariants
-}
+interface ButtonProps
+  extends ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {}
 
 const Button: FC<ButtonProps> = ({
   children,
   className,
-  disabled,
-  href,
-  onClick,
-  type = 'button',
-  variant = 'solid',
+  size,
+  variant,
+  ...props
 }) => {
   return (
-    <>
-      {href ? (
-        <Link
-          className={cn(
-            // buttonVariants[variant],
-            className
-          )}
-          href={href}
-        >
-          {children}
-        </Link>
-      ) : (
-        <button
-          className={cn(
-            // buttonVariants[variant],
-            className
-          )}
-          disabled={disabled}
-          onClick={onClick}
-          type={type}
-        >
-          {children}
-        </button>
-      )}
-    </>
+    <button
+      className={cn(buttonVariants({ size, variant }), className)}
+      {...props}
+    >
+      {children}
+    </button>
   )
 }
 
