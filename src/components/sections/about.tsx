@@ -1,7 +1,9 @@
+import { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
 import Technologies from '@/components/ui/technologies/technologies'
 import { cn } from '@/utils'
+import Link from 'next/link'
 import { FC } from 'react'
 
 const About: FC = () => {
@@ -37,6 +39,15 @@ const About: FC = () => {
               <b>lasting impression</b>!
             </p>
           </div>
+          <Link
+            className={cn('mt-6', buttonVariants())}
+            download="Anton_Bochkovskyi_Front-End_Developer_CV"
+            href="/Anton_Bochkovskyi_Front-End_Developer_CV.pdf"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Download CV
+          </Link>
         </article>
         <Technologies className="self-start" />
       </Content>
