@@ -14,7 +14,7 @@ const Hero: FC = () => {
     >
       <Content className="flex flex-col items-center justify-center text-center">
         <article className="max-w-4xl">
-          <Heading className="mx-auto">
+          <Heading position="center">
             Hi, I&apos;m <span className="text-accent">Anton Bochkovskyi</span>
           </Heading>
           <p className="mt-4 font-medium md:text-xl">
