@@ -19,7 +19,7 @@ const Header: FC<HeaderProps> = ({ className }) => {
     >
       <HeaderNavbar />
       <div className="relative z-30 flex items-center justify-between md:static">
-        <ThemeToggler className="-m-2 md:absolute md:right-10 md:top-1/2 md:m-0 md:-translate-y-1/2" />
+        <ThemeToggler className="-mx-5 -my-2 md:absolute md:right-5 md:top-1/2 md:m-0 md:-translate-y-1/2" />
         <MenuIcon className="md:hidden" />
       </div>
     </header>
