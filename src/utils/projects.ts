@@ -1,19 +1,19 @@
 import Project from '@/types/Project'
-import { PROJECTS_PATH } from '@/utils'
 import { readFile, readdir } from 'fs/promises'
 import matter from 'gray-matter'
 import { marked } from 'marked'
 import path from 'path'
 
-const fileExtension = '.md'
+const PROJECTS_PATH = './content/projects'
+const FILE_EXTENSION = '.md'
 
 export const getProjects = async (): Promise<Project[]> => {
   const dirPath = path.join(process.cwd(), PROJECTS_PATH)
   const files = await readdir(dirPath)
 
   const slugs = files
-    .filter((file) => file.endsWith(fileExtension))
-    .map((file) => file.replace(fileExtension, ''))
+    .filter((file) => file.endsWith(FILE_EXTENSION))
+    .map((file) => file.replace(FILE_EXTENSION, ''))
 
   let projects: Project[] = []
 
@@ -37,7 +37,7 @@ export const getProject = async (slug: string): Promise<Project> => {
   const filePath = path.join(
     process.cwd(),
     PROJECTS_PATH,
-    `${slug}${fileExtension}`
+    `${slug}${FILE_EXTENSION}`
   )
 
   const text = await readFile(filePath, 'utf-8')
