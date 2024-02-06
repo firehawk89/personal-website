@@ -4,14 +4,13 @@ import Heading from '@/components/ui/heading'
 import Technologies from '@/components/ui/technologies/technologies'
 import { cn } from '@/utils'
 import Link from 'next/link'
-import { FC } from 'react'
+import { FC, HTMLAttributes } from 'react'
 
-const About: FC = () => {
+interface AboutProps extends HTMLAttributes<HTMLDivElement> {}
+
+const About: FC<AboutProps> = ({ className, ...props }) => {
   return (
-    <section
-      className={cn('bg-light py-12 dark:bg-black md:py-20')}
-      id="about-me"
-    >
+    <section className={cn('bg-light dark:bg-black', className)} {...props}>
       <Content className="flex gap-6 md:gap-10">
         <article>
           <Heading size="h2" variant="underline">
