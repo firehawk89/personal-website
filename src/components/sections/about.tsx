@@ -1,15 +1,16 @@
+import { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
 import Technologies from '@/components/ui/technologies/technologies'
 import { cn } from '@/utils'
-import { FC } from 'react'
+import Link from 'next/link'
+import { FC, HTMLAttributes } from 'react'
 
-const About: FC = () => {
+interface AboutProps extends HTMLAttributes<HTMLDivElement> {}
+
+const About: FC<AboutProps> = ({ className, ...props }) => {
   return (
-    <section
-      className={cn('bg-light py-12 dark:bg-black md:py-20')}
-      id="about-me"
-    >
+    <section className={cn('bg-light dark:bg-black', className)} {...props}>
       <Content className="flex gap-6 md:gap-10">
         <article>
           <Heading size="h2" variant="underline">
@@ -37,6 +38,15 @@ const About: FC = () => {
               <b>lasting impression</b>!
             </p>
           </div>
+          <Link
+            className={cn('mt-6', buttonVariants())}
+            download="Anton_Bochkovskyi_Front-End_Developer_CV"
+            href="/Anton_Bochkovskyi_Front-End_Developer_CV.pdf"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Download CV
+          </Link>
         </article>
         <Technologies className="self-start" />
       </Content>

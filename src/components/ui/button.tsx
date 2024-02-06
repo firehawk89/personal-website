@@ -11,12 +11,12 @@ export const buttonVariants = cva(
     },
     variants: {
       size: {
-        default: 'py-2 px-5 rounded-md',
-        sm: 'p-2',
+        default: 'block w-fit py-2 px-5 rounded-md',
+        sm: 'block w-fit p-2',
       },
       variant: {
         default:
-          'border-2 border-accent bg-accent text-light md:hover:bg-opacity-80',
+          'border-2 border-accent bg-accent text-light md:hover:bg-accent-light md:hover:border-accent-light',
         icon: 'bg-transparent md:hover:text-accent',
         outline:
           'border-2 border-accent bg-transparent text-accent md:hover:bg-accent md:hover:text-light',
