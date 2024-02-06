@@ -29,7 +29,7 @@ const HeaderNavbar: FC<HeaderNavbarProps> = ({ className }) => {
         orientation={isMobile ? 'vertical' : 'horizontal'}
       >
         <MenuItem href="/#about-me">About Me</MenuItem>
-        <MenuItem href="/#my-projects">My Work</MenuItem>
+        <MenuItem href="/#my-projects">My Projects</MenuItem>
         <MenuItem href="/#contact-me">Contact Me</MenuItem>
       </Menu>
       <Socials className="mt-6 justify-center md:hidden" />
