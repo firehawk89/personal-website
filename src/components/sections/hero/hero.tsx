@@ -1,8 +1,9 @@
-import Button from '@/components/ui/button'
+import Button, { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
 import Socials from '@/components/ui/socials/socials'
 import { cn } from '@/utils'
+import Link from 'next/link'
 import { FC, HTMLAttributes } from 'react'
 
 import styles from './hero.module.css'
@@ -29,9 +30,12 @@ const Hero: FC<HeroProps> = ({ className, ...props }) => {
             elegant and responsive user interfaces.
           </p>
         </article>
-        <Button className="mt-5" variant="outline">
-          My Work
-        </Button>
+        <Link
+          className={cn('mt-5', buttonVariants({ variant: 'outline' }))}
+          href="/#my-projects"
+        >
+          My Projects
+        </Link>
       </Content>
       <Socials
         className="absolute bottom-8 left-8 hidden md:flex"
