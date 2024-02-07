@@ -39,10 +39,10 @@ const ProjectCard: FC<ProjectCardProps> = ({
             />
             {technologies && (
               <div className="flex flex-wrap gap-2">
-                {technologies.map((technology, index) => (
+                {technologies.map((technology) => (
                   <span
                     className="rounded-xl bg-accent bg-opacity-75 px-2 py-1 text-sm font-semibold"
-                    key={index + 1}
+                    key={technology}
                   >
                     {technology}
                   </span>
