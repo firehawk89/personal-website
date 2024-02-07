@@ -23,7 +23,7 @@ const Projects: FC<ProjectsProps> = async ({ className, ...props }) => {
             explore other sections of the site.
           </p>
         ) : (
-          <section className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-8 md:mt-14 lg:max-w-none lg:grid-cols-2 xl:gap-14">
+          <section className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-8 md:mt-14 lg:max-w-none lg:grid-cols-2 xl:gap-12">
             {projects.map((project) => (
               <ProjectCard
                 data={project}
