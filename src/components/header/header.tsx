@@ -13,7 +13,7 @@ const Header: FC<HeaderProps> = ({ className }) => {
   return (
     <header
       className={cn(
-        'fixed left-0 top-0 z-10 w-full bg-light bg-opacity-10 px-8 py-4 shadow-blur backdrop-blur-[8px] lg:px-10',
+        'fixed left-0 top-0 z-10 w-full bg-light bg-opacity-10 px-8 py-5 shadow-blur backdrop-blur-[8px] lg:px-10',
         className
       )}
     >
