@@ -4,7 +4,7 @@ import { FC, InputHTMLAttributes } from 'react'
 import { Path, UseFormRegister } from 'react-hook-form'
 
 export const inputVariants = cva(
-  'w-full transition-colors outline-none md:text-xl',
+  'w-full transition-colors outline-none md:text-lg',
   {
     defaultVariants: {
       customSize: 'default',
