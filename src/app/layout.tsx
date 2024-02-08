@@ -3,7 +3,6 @@ import type { Metadata } from 'next'
 import Header from '@/components/header/header'
 import Providers from '@/store/providers'
 import { cn } from '@/utils'
-import { Toaster } from 'sonner'
 
 import { raleway } from './fonts'
 import './globals.css'
@@ -26,12 +25,6 @@ export default function RootLayout({
           <main className="flex-shrink flex-grow basis-0">{children}</main>
           <div>11111</div>
         </Providers>
-        <Toaster
-          position="bottom-center"
-          richColors
-          theme="system"
-          toastOptions={{ classNames: { title: 'text-sm' } }}
-        />
       </body>
     </html>
   )

@@ -1,5 +1,6 @@
 import ThemeProvider from '@/store/providers/theme-provider'
 import { FC, ReactNode } from 'react'
+import { Toaster } from 'sonner'
 
 import HeaderProvider from './header-provider'
 
@@ -14,6 +15,12 @@ const Providers: FC<ProvidersProps> = ({ children }) => {
       enableSystem
     >
       <HeaderProvider>{children}</HeaderProvider>
+      <Toaster
+        position="bottom-center"
+        richColors
+        theme="system"
+        toastOptions={{ classNames: { title: 'text-sm' } }}
+      />
     </ThemeProvider>
   )
 }
