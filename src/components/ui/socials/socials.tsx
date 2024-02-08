@@ -1,14 +1,13 @@
 import SocialsItem from '@/components/ui/socials/socials-item'
 import { cn } from '@/utils'
-import { FC } from 'react'
+import { FC, HTMLAttributes } from 'react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 
-type SocialsProps = {
-  className?: string
+interface SocialsProps extends HTMLAttributes<HTMLUListElement> {
   orientation?: 'horizontal' | 'vertical'
 }
 
-const Socials: FC<SocialsProps> = ({ className, orientation }) => {
+const Socials: FC<SocialsProps> = ({ className, orientation, ...props }) => {
   return (
     <ul
       className={cn(
@@ -16,6 +15,7 @@ const Socials: FC<SocialsProps> = ({ className, orientation }) => {
         orientation === 'vertical' ? 'flex-col' : 'flex-row',
         className
       )}
+      {...props}
     >
       <SocialsItem
         Icon={FaLinkedin}

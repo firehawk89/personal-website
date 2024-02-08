@@ -1,10 +1,9 @@
 import Link from 'next/link'
-import { ComponentType, FC } from 'react'
+import { ComponentType, FC, LiHTMLAttributes } from 'react'
 import { IconBaseProps } from 'react-icons'
 
-type SocialsItemProps = {
+interface SocialsItemProps extends LiHTMLAttributes<HTMLLIElement> {
   Icon: ComponentType<IconBaseProps>
-  className?: string
   href: string
   title: string
 }
@@ -14,9 +13,10 @@ const SocialsItem: FC<SocialsItemProps> = ({
   className,
   href,
   title,
+  ...props
 }) => {
   return (
-    <li className={className}>
+    <li className={className} {...props}>
       <Link
         className="transition-colors hover:text-accent"
         href={href}

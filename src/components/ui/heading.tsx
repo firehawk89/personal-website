@@ -37,12 +37,14 @@ const Heading: FC<HeadingProps> = ({
   position,
   size,
   variant,
+  ...props
 }) => {
   const HeadingTag = size ? size : 'h1'
 
   return (
     <HeadingTag
       className={cn(headingVariants({ position, size, variant }), className)}
+      {...props}
     >
       {children}
     </HeadingTag>

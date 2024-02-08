@@ -1,13 +1,16 @@
 import { cn } from '@/utils'
-import { FC, ReactNode } from 'react'
+import { FC, HTMLAttributes } from 'react'
 
-type MenuProps = {
-  children: ReactNode
-  className?: string
+interface MenuProps extends HTMLAttributes<HTMLUListElement> {
   orientation?: 'horizontal' | 'vertical'
 }
 
-const Menu: FC<MenuProps> = ({ children, className, orientation }) => {
+const Menu: FC<MenuProps> = ({
+  children,
+  className,
+  orientation,
+  ...props
+}) => {
   return (
     <ul
       className={cn(
@@ -15,6 +18,7 @@ const Menu: FC<MenuProps> = ({ children, className, orientation }) => {
         orientation === 'vertical' ? 'flex-col gap-6' : 'flex-row gap-10',
         className
       )}
+      {...props}
     >
       {children}
     </ul>

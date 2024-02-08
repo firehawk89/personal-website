@@ -1,14 +1,14 @@
 'use client'
 
-import Button from '@/components/ui/button'
+import Button, { ButtonProps } from '@/components/ui/button'
 import Theme from '@/types/enums/Theme'
 import { useTheme } from 'next-themes'
 import { FC, useEffect, useState } from 'react'
 import { CiDark, CiLight } from 'react-icons/ci'
 
-type ThemeTogglerProps = { className?: string }
+interface ThemeTogglerProps extends ButtonProps {}
 
-const ThemeToggler: FC<ThemeTogglerProps> = ({ className }) => {
+const ThemeToggler: FC<ThemeTogglerProps> = ({ className, ...props }) => {
   const [mounted, setMounted] = useState<boolean>(false)
   const { resolvedTheme, setTheme } = useTheme()
   const isDarkTheme = (resolvedTheme as Theme) === 'dark'
@@ -20,11 +20,16 @@ const ThemeToggler: FC<ThemeTogglerProps> = ({ className }) => {
   return (
     <>
       {!mounted ? (
-        <Button className={className} variant="icon">
+        <Button className={className} variant="icon" {...props}>
           <div className="h-7 w-7 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-700" />
         </Button>
       ) : (
-        <Button className={className} onClick={toggleTheme} variant="icon">
+        <Button
+          className={className}
+          onClick={toggleTheme}
+          variant="icon"
+          {...props}
+        >
           {isDarkTheme ? (
             <CiDark className="h-7 w-7" />
           ) : (

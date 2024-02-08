@@ -18,9 +18,10 @@ const ProjectCard: FC<ProjectCardProps> = ({
   className,
   data: { body, image, slug, technologies, title },
   imageSizes,
+  ...props
 }) => {
   return (
-    <article className={cn('group', className)}>
+    <article className={cn('group', className)} {...props}>
       <Card>
         <Link className="relative block aspect-video" href={`/${slug}`}>
           {image ? (

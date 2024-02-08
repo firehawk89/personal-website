@@ -2,21 +2,20 @@
 
 import HeaderContext from '@/store/header-context'
 import { cn } from '@/utils'
-import { FC, useContext } from 'react'
+import { FC, HTMLAttributes, useContext } from 'react'
 
 import MenuIconBar from './menu-icon-bar'
 
-type MenuIconProps = {
-  className?: string
-}
+interface MenuIconProps extends HTMLAttributes<HTMLDivElement> {}
 
-const MenuIcon: FC<MenuIconProps> = ({ className }) => {
+const MenuIcon: FC<MenuIconProps> = ({ className, ...props }) => {
   const { isMenuOpened, toggleMenu } = useContext(HeaderContext)
 
   return (
     <div
       className={cn('relative h-5 w-7 cursor-pointer md:static', className)}
       onClick={toggleMenu}
+      {...props}
     >
       <MenuIconBar
         className={cn(

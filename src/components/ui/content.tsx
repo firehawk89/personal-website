@@ -1,11 +1,14 @@
 import { cn } from '@/utils'
-import { FC, ReactNode } from 'react'
+import { FC, HTMLAttributes } from 'react'
 
-type ContentProps = { children: ReactNode; className?: string }
+interface ContentProps extends HTMLAttributes<HTMLDivElement> {}
 
-const Content: FC<ContentProps> = ({ children, className }) => {
+const Content: FC<ContentProps> = ({ children, className, ...props }) => {
   return (
-    <div className={cn('mx-auto h-full w-full max-w-7xl px-5', className)}>
+    <div
+      className={cn('mx-auto h-full w-full max-w-7xl px-5', className)}
+      {...props}
+    >
       {children}
     </div>
   )

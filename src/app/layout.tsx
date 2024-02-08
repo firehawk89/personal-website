@@ -1,5 +1,4 @@
 // TODO: Adjust site metadata
-// TODO: Adjust components props types
 // TODO: Add 404 page
 
 import type { Metadata } from 'next'
