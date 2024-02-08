@@ -1,3 +1,5 @@
+// TODO: Add projects individual routes
+
 import Card from '@/components/ui/card'
 import Heading from '@/components/ui/heading'
 import ImagePlaceholder from '@/components/ui/image-placeholder'
