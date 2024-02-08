@@ -3,7 +3,7 @@ import { VariantProps, cva } from 'class-variance-authority'
 import { ButtonHTMLAttributes, FC } from 'react'
 
 export const buttonVariants = cva(
-  'font-medium transition-all active:scale-95 md:text-lg',
+  'font-medium transition-all active:scale-95 md:text-lg disabled:pointer-events-none',
   {
     defaultVariants: {
       size: 'default',
@@ -16,10 +16,10 @@ export const buttonVariants = cva(
       },
       variant: {
         default:
-          'border-2 border-accent bg-accent text-light md:hover:bg-accent-light md:hover:border-accent-light',
+          'border-2 border-accent bg-accent text-light md:hover:bg-accent-light disabled:border-accent-light disabled:bg-accent-light md:hover:border-accent-light',
         icon: 'bg-transparent md:hover:text-accent',
         outline:
-          'border-2 border-accent bg-transparent text-accent md:hover:bg-accent md:hover:text-light',
+          'border-2 border-accent bg-transparent text-accent disabled:border-accent-light disabled:text-accent-light md:hover:bg-accent md:hover:text-light',
       },
     },
   }
