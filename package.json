@@ -15,6 +15,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@emailjs/nodejs": "^2.2.0",
     "@hookform/resolvers": "^3.3.4",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
