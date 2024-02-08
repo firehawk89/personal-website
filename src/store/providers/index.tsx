@@ -1,3 +1,4 @@
+import Toaster from '@/components/ui/toaster'
 import ThemeProvider from '@/store/providers/theme-provider'
 import { FC, ReactNode } from 'react'
 
@@ -14,6 +15,7 @@ const Providers: FC<ProvidersProps> = ({ children }) => {
       enableSystem
     >
       <HeaderProvider>{children}</HeaderProvider>
+      <Toaster />
     </ThemeProvider>
   )
 }

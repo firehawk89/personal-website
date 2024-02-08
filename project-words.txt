@@ -4,3 +4,5 @@ clsx
 Nextdotjs
 Tailwindcss
 Skauna
+hookform
+sonner
