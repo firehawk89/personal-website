@@ -6,13 +6,11 @@ import Socials from '@/components/ui/socials/socials'
 import useMediaQuery from '@/hooks/use-media-query'
 import HeaderContext from '@/store/header-context'
 import { MOBILE_BREAKPOINT, cn } from '@/utils'
-import { FC, useContext } from 'react'
+import { FC, HTMLAttributes, useContext } from 'react'
 
-type HeaderNavbarProps = {
-  className?: string
-}
+interface HeaderNavbarProps extends HTMLAttributes<HTMLDivElement> {}
 
-const HeaderNavbar: FC<HeaderNavbarProps> = ({ className }) => {
+const HeaderNavbar: FC<HeaderNavbarProps> = ({ className, ...props }) => {
   const { isMenuOpened } = useContext(HeaderContext)
   const isMobile = useMediaQuery(MOBILE_BREAKPOINT)
 
@@ -23,6 +21,7 @@ const HeaderNavbar: FC<HeaderNavbarProps> = ({ className }) => {
         isMenuOpened && 'translate-y-0',
         className
       )}
+      {...props}
     >
       <Menu
         className="mx-auto uppercase"
