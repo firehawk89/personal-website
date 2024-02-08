@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  --header-height: 3.375rem;
+  --header-height: 4.25rem;
   @apply scroll-smooth;
 }
 
