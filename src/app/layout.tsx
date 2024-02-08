@@ -1,5 +1,10 @@
+// TODO: Adjust site metadata
+// TODO: Adjust components props types
+// TODO: Add 404 page
+
 import type { Metadata } from 'next'
 
+import Footer from '@/components/footer'
 import Header from '@/components/header/header'
 import Providers from '@/store/providers'
 import { cn } from '@/utils'
@@ -23,7 +28,7 @@ export default function RootLayout({
         <Providers>
           <Header />
           <main className="flex-shrink flex-grow basis-0">{children}</main>
-          <div>11111</div>
+          <Footer />
         </Providers>
       </body>
     </html>

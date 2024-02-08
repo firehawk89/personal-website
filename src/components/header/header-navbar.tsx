@@ -19,13 +19,13 @@ const HeaderNavbar: FC<HeaderNavbarProps> = ({ className }) => {
   return (
     <nav
       className={cn(
-        'fixed left-0 right-0 top-0 z-20 -translate-y-full border-b border-accent bg-light py-8 transition-transform duration-500 dark:bg-black md:static md:translate-y-0 md:border-none md:bg-transparent md:p-0 md:dark:bg-transparent',
+        'fixed left-0 right-0 top-0 z-20 -translate-y-full border-b border-accent bg-light py-8 transition-transform duration-500 dark:bg-dark md:static md:translate-y-0 md:border-none md:bg-transparent md:p-0 md:dark:bg-transparent',
         isMenuOpened && 'translate-y-0',
         className
       )}
     >
       <Menu
-        className="mx-auto"
+        className="mx-auto uppercase"
         orientation={isMobile ? 'vertical' : 'horizontal'}
       >
         <MenuItem href="/#about-me">About Me</MenuItem>
