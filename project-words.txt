@@ -5,3 +5,4 @@ Nextdotjs
 Tailwindcss
 Skauna
 hookform
+sonner
