@@ -14,12 +14,19 @@ const HeaderProvider: FC<HeaderProviderProps> = ({ children }) => {
   const [isMenuOpened, setIsMenuOpened] = useState<boolean>(false)
   const [allowToggle, setAllowToggle] = useState<boolean>(false)
 
-  const toggleMenu = useCallback(() => {
+  const openMenu = useCallback(() => {
     if (allowToggle) {
-      document.body.classList.toggle('no-scroll')
-      setIsMenuOpened(!isMenuOpened)
+      document.body.classList.add('no-scroll')
+      setIsMenuOpened(true)
     }
-  }, [isMenuOpened, allowToggle])
+  }, [allowToggle])
+
+  const closeMenu = useCallback(() => {
+    if (allowToggle) {
+      document.body.classList.remove('no-scroll')
+      setIsMenuOpened(false)
+    }
+  }, [allowToggle])
 
   useEffect(() => {
     if (isMobile) {
@@ -31,7 +38,7 @@ const HeaderProvider: FC<HeaderProviderProps> = ({ children }) => {
   }, [isMobile])
 
   return (
-    <HeaderContext.Provider value={{ isMenuOpened, toggleMenu }}>
+    <HeaderContext.Provider value={{ closeMenu, isMenuOpened, openMenu }}>
       {children}
     </HeaderContext.Provider>
   )
