@@ -2,12 +2,12 @@ import { cn } from '@/utils'
 import { ComponentType, FC, HTMLAttributes } from 'react'
 import { IconBaseProps } from 'react-icons'
 
-interface TechnologiesItemProps extends HTMLAttributes<HTMLLIElement> {
+interface TechnologyIconsItemProps extends HTMLAttributes<HTMLLIElement> {
   Icon: ComponentType<IconBaseProps>
   title: string
 }
 
-const TechnologiesItem: FC<TechnologiesItemProps> = ({
+const TechnologyIconsItem: FC<TechnologyIconsItemProps> = ({
   Icon,
   className,
   title,
@@ -28,4 +28,4 @@ const TechnologiesItem: FC<TechnologiesItemProps> = ({
   )
 }
 
-export default TechnologiesItem
+export default TechnologyIconsItem
