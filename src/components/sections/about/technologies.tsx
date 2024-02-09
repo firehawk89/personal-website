@@ -1,4 +1,4 @@
-import TechnologiesItem from '@/components/ui/technologies/technologies-item'
+import TechnologiesItem from '@/components/sections/about/technologies-item'
 import { cn } from '@/utils'
 import { FC, HTMLAttributes } from 'react'
 import { FaSass } from 'react-icons/fa'

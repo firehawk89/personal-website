@@ -1,7 +1,7 @@
+import Technologies from '@/components/sections/about/technologies'
 import { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
-import Technologies from '@/components/ui/technologies/technologies'
 import { cn } from '@/utils'
 import Link from 'next/link'
 import { FC, HTMLAttributes } from 'react'
