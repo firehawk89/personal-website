@@ -17,8 +17,11 @@ const Hero: FC<HeroProps> = ({ className, ...props }) => {
       )}
       {...props}
     >
-      <Content className="flex flex-col items-center justify-center text-center">
-        <article className="max-w-4xl">
+      <Content
+        className="flex flex-col items-center justify-center text-center"
+        size="tight"
+      >
+        <article>
           <Heading position="center">
             Hi, I&apos;m <span className="text-accent">Anton Bochkovskyi</span>
           </Heading>

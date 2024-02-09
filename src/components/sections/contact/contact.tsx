@@ -9,7 +9,7 @@ interface ContactProps extends HTMLAttributes<HTMLDivElement> {}
 const Contact: FC<ContactProps> = ({ className, ...props }) => {
   return (
     <section className={cn('bg-light dark:bg-black', className)} {...props}>
-      <Content className="max-w-4xl">
+      <Content size="tight">
         <Heading size="h2" variant="underline">
           Get In Touch
         </Heading>
