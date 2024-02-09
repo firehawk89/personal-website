@@ -21,6 +21,12 @@ const config: Config = {
       fontFamily: {
         text: 'var(--font-text)',
       },
+      padding: {
+        header: 'var(--header-height)',
+      },
+      scrollPadding: {
+        header: 'var(--header-height)',
+      },
     },
   },
 }
