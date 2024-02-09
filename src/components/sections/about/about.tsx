@@ -1,4 +1,4 @@
-import Technologies from '@/components/sections/about/technologies'
+import TechnologyIcons from '@/components/sections/about/technology-icons'
 import { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
@@ -50,7 +50,7 @@ const About: FC<AboutProps> = ({ className, ...props }) => {
             Download CV
           </Link>
         </article>
-        <Technologies className="self-start" />
+        <TechnologyIcons className="self-start" />
       </Content>
     </section>
   )
