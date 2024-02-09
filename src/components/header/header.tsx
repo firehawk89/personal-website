@@ -1,4 +1,5 @@
 import HeaderNavbar from '@/components/header/header-navbar'
+import Logo from '@/components/ui/logo'
 import ThemeToggler from '@/components/ui/theme-toggler'
 import { cn } from '@/utils'
 import { FC, HTMLAttributes } from 'react'
@@ -16,7 +17,8 @@ const Header: FC<HeaderProps> = ({ className, ...props }) => {
       )}
       {...props}
     >
-      <HeaderNavbar />
+      <Logo className="absolute left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 md:left-8 md:translate-x-0" />
+      <HeaderNavbar className="z-20" />
       <div className="relative z-30 flex items-center justify-between md:static">
         <ThemeToggler className="-mx-5 -my-2 md:absolute md:right-5 md:top-1/2 md:m-0 md:-translate-y-1/2" />
         <MenuIcon className="md:hidden" />
