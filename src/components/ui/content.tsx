@@ -1,14 +1,27 @@
 import { cn } from '@/utils'
+import { VariantProps, cva } from 'class-variance-authority'
 import { FC, HTMLAttributes } from 'react'
 
-interface ContentProps extends HTMLAttributes<HTMLDivElement> {}
+const contentVariants = cva('mx-auto h-full w-full', {
+  defaultVariants: {
+    size: 'default',
+  },
+  variants: {
+    size: {
+      default: 'max-w-7xl px-5',
+      tight: 'max-w-4xl px-5',
+      wide: 'px-8 lg:px-10',
+    },
+  },
+})
 
-const Content: FC<ContentProps> = ({ children, className, ...props }) => {
+interface ContentProps
+  extends HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof contentVariants> {}
+
+const Content: FC<ContentProps> = ({ children, className, size, ...props }) => {
   return (
-    <div
-      className={cn('mx-auto h-full w-full max-w-7xl px-5', className)}
-      {...props}
-    >
+    <div className={cn(contentVariants({ size }), className)} {...props}>
       {children}
     </div>
   )
