@@ -6,6 +6,9 @@ import { cn } from '@/utils'
 import Link from 'next/link'
 import { FC, HTMLAttributes } from 'react'
 
+const CV_FILENAME = 'Anton_Bochkovskyi_Front-End_Developer_CV'
+const CV_FILE_EXTENSION = '.pdf'
+
 interface AboutProps extends HTMLAttributes<HTMLDivElement> {}
 
 const About: FC<AboutProps> = ({ className, ...props }) => {
@@ -23,9 +26,8 @@ const About: FC<AboutProps> = ({ className, ...props }) => {
               <b>responsive</b> and visually <b>stunning</b> web applications.
             </p>
             <p>
-              I enjoy working closely with cross-functional teams, including
-              designers and back-end developers, to{' '}
-              <strong>transform ideas into reality</strong>. Clear
+              I enjoy working in team and{' '}
+              <strong>transforming ideas into reality</strong>. Clear
               communication, attention to detail, and a commitment to delivering{' '}
               <b>high-quality</b> code are values I uphold in my works.
             </p>
@@ -40,8 +42,8 @@ const About: FC<AboutProps> = ({ className, ...props }) => {
           </div>
           <Link
             className={cn('mt-6', buttonVariants())}
-            download="Anton_Bochkovskyi_Front-End_Developer_CV"
-            href="/Anton_Bochkovskyi_Front-End_Developer_CV.pdf"
+            download={CV_FILENAME}
+            href={`/${CV_FILENAME}${CV_FILE_EXTENSION}`}
             rel="noreferrer"
             target="_blank"
           >
