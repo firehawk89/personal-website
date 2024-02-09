@@ -17,7 +17,7 @@ const HeaderNavbar: FC<HeaderNavbarProps> = ({ className, ...props }) => {
   return (
     <nav
       className={cn(
-        'fixed left-0 right-0 top-0 z-20 -translate-y-full border-b border-accent bg-light py-8 transition-transform duration-500 dark:bg-dark md:static md:translate-y-0 md:border-none md:bg-transparent md:p-0 md:dark:bg-transparent',
+        'fixed left-0 right-0 top-0 -translate-y-full border-b border-accent bg-light pb-10 pt-20 transition-transform duration-500 dark:bg-dark md:static md:translate-y-0 md:border-none md:bg-transparent md:p-0 md:dark:bg-transparent',
         isMenuOpened && 'translate-y-0',
         className
       )}

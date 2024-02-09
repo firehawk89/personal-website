@@ -1,4 +1,4 @@
-import Button, { buttonVariants } from '@/components/ui/button'
+import { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
 import Socials from '@/components/ui/socials/socials'
@@ -6,16 +6,13 @@ import { cn } from '@/utils'
 import Link from 'next/link'
 import { FC, HTMLAttributes } from 'react'
 
-import styles from './hero.module.css'
-
 interface HeroProps extends HTMLAttributes<HTMLDivElement> {}
 
 const Hero: FC<HeroProps> = ({ className, ...props }) => {
   return (
     <section
       className={cn(
-        'relative bg-ghost dark:bg-dark',
-        styles['hero-container'],
+        'relative h-[100dvh] bg-ghost pt-header dark:bg-dark',
         className
       )}
       {...props}
