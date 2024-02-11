@@ -1,6 +1,6 @@
 type Project = {
   body: Promise<string> | string
-  description: string
+  features: string[]
   image: string
   slug: string
   technologies: string[]
