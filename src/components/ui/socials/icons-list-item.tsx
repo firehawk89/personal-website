@@ -1,13 +1,13 @@
 import { ComponentType, FC, LiHTMLAttributes } from 'react'
 import { IconBaseProps } from 'react-icons'
 
-interface SocialsItemProps extends LiHTMLAttributes<HTMLLIElement> {
+interface IconsListItemProps extends LiHTMLAttributes<HTMLLIElement> {
   Icon: ComponentType<IconBaseProps>
   href: string
   title: string
 }
 
-const SocialsItem: FC<SocialsItemProps> = ({
+const IconsListItem: FC<IconsListItemProps> = ({
   Icon,
   className,
   href,
@@ -28,4 +28,4 @@ const SocialsItem: FC<SocialsItemProps> = ({
   )
 }
 
-export default SocialsItem
+export default IconsListItem
