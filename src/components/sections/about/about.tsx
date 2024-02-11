@@ -19,7 +19,7 @@ const About: FC<AboutProps> = ({ className, ...props }) => {
           <Heading level={2} size="h2" variant="underline">
             About Me
           </Heading>
-          <div className="mt-6 space-y-4 font-medium md:text-xl">
+          <div className="mt-6 space-y-4 font-medium md:text-lg">
             <p>
               I&apos;m a <strong>Front-End Developer</strong> specializing in
               React, Next.js, and Tailwind CSS, with a keen focus on crafting{' '}

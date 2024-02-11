@@ -25,7 +25,7 @@ const Hero: FC<HeroProps> = ({ className, ...props }) => {
           <Heading position="center">
             Hi, I&apos;m <span className="text-accent">Anton Bochkovskyi</span>
           </Heading>
-          <p className="mt-4 font-medium md:text-xl">
+          <p className="mt-4 text-lg font-medium md:text-xl">
             Motivated Front-End Developer with a passion for creating engaging,
             elegant and responsive user interfaces.
           </p>
