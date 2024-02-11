@@ -51,7 +51,7 @@ export const getProject = async (slug: string): Promise<Project> => {
 
   const {
     content,
-    data: { features, image, technologies, title },
+    data: { features, github, image, technologies, title, website },
   } = matter(text)
 
   const renderer = new marked.Renderer()
@@ -60,5 +60,5 @@ export const getProject = async (slug: string): Promise<Project> => {
   }
   const body = marked(content, { renderer })
 
-  return { body, features, image, slug, technologies, title }
+  return { body, features, github, image, slug, technologies, title, website }
 }
