@@ -10,7 +10,7 @@ const Contact: FC<ContactProps> = ({ className, ...props }) => {
   return (
     <section className={cn('bg-light dark:bg-black', className)} {...props}>
       <Content size="tight">
-        <Heading size="h2" variant="underline">
+        <Heading level={2} size="h2" variant="underline">
           Get In Touch
         </Heading>
         <p className="mt-6 md:text-xl">

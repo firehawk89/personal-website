@@ -16,7 +16,7 @@ const About: FC<AboutProps> = ({ className, ...props }) => {
     <section className={cn('bg-light dark:bg-black', className)} {...props}>
       <Content className="flex gap-6 md:gap-10">
         <article>
-          <Heading size="h2" variant="underline">
+          <Heading level={2} size="h2" variant="underline">
             About Me
           </Heading>
           <div className="mt-6 space-y-4 font-medium md:text-xl">
