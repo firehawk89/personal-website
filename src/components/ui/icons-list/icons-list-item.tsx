@@ -21,7 +21,11 @@ const IconsListItem: FC<IconsListItemProps> = ({
         href={href}
         target="_blank"
       >
-        <Icon aria-hidden="true" className="h-8 w-8" focusable="false" />
+        <Icon
+          aria-hidden="true"
+          className="h-7 w-7 md:h-8 md:w-8"
+          focusable="false"
+        />
         <span className="sr-only">{title}</span>
       </a>
     </li>

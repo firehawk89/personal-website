@@ -12,7 +12,7 @@ const FormItem: FC<FormItemProps> = ({
   ...props
 }) => {
   return (
-    <div className={cn('relative flex flex-col gap-1', className)} {...props}>
+    <div className={cn('relative flex flex-col gap-2', className)} {...props}>
       {children}
       {error && (
         <span className="absolute -bottom-1 left-0 translate-y-full text-xs text-red-500">
