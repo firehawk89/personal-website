@@ -1,6 +1,6 @@
 ---
 title: 'YelpCamp'
-description: 'YelpCamp project description'
+description: 'An upgraded version of Node.js web app project from the "The Web Developer Bootcamp" course on Udemy by Colt Steele.'
 image: '/YelpCamp.jpg'
 technologies: ['JavaScript', 'Node.js', 'Express', 'MongoDB', 'Bootstrap']
 ---
