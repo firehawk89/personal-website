@@ -18,7 +18,7 @@ interface ProjectCardProps extends HTMLAttributes<HTMLDivElement> {
 
 const ProjectCard: FC<ProjectCardProps> = ({
   className,
-  data: { description, image, slug, technologies, title },
+  data: { body, image, slug, technologies, title },
   imageSizes,
   ...props
 }) => {
@@ -42,7 +42,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
             </Heading>
             <p
               className="line-clamp-1 sm:line-clamp-2 md:line-clamp-3"
-              dangerouslySetInnerHTML={{ __html: description }}
+              dangerouslySetInnerHTML={{ __html: body }}
             />
             {technologies && (
               <Chips>
