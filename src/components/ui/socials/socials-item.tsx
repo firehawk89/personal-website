@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { ComponentType, FC, LiHTMLAttributes } from 'react'
 import { IconBaseProps } from 'react-icons'
 
@@ -17,14 +16,14 @@ const SocialsItem: FC<SocialsItemProps> = ({
 }) => {
   return (
     <li className={className} {...props}>
-      <Link
+      <a
         className="transition-colors hover:text-accent"
         href={href}
         target="_blank"
       >
         <Icon aria-hidden="true" className="h-8 w-8" focusable="false" />
         <span className="sr-only">{title}</span>
-      </Link>
+      </a>
     </li>
   )
 }
