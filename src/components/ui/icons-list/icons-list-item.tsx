@@ -19,6 +19,7 @@ const IconsListItem: FC<IconsListItemProps> = ({
       <a
         className="transition-colors hover:text-accent"
         href={href}
+        rel="noopener noreferrer"
         target="_blank"
       >
         <Icon
