@@ -1,4 +1,4 @@
-import TechnologiesItem from '@/components/ui/technologies/technologies-item'
+import TechnologyIconsItem from '@/components/sections/about/technology-icons-item'
 import { cn } from '@/utils'
 import { FC, HTMLAttributes } from 'react'
 import { FaSass } from 'react-icons/fa'
@@ -12,9 +12,9 @@ import {
   SiTypescript,
 } from 'react-icons/si'
 
-interface TechnologiesProps extends HTMLAttributes<HTMLUListElement> {}
+interface TechnologyIconsProps extends HTMLAttributes<HTMLUListElement> {}
 
-const Technologies: FC<TechnologiesProps> = ({ className, ...props }) => {
+const TechnologyIcons: FC<TechnologyIconsProps> = ({ className, ...props }) => {
   return (
     <ul
       className={cn(
@@ -23,34 +23,42 @@ const Technologies: FC<TechnologiesProps> = ({ className, ...props }) => {
       )}
       {...props}
     >
-      <TechnologiesItem
+      <TechnologyIconsItem
         Icon={SiHtml5}
         className="text-[#f15b29]"
         title="HTML5"
       />
-      <TechnologiesItem Icon={SiCss3} className="text-[#1775bb]" title="CSS3" />
-      <TechnologiesItem
+      <TechnologyIconsItem
+        Icon={SiCss3}
+        className="text-[#1775bb]"
+        title="CSS3"
+      />
+      <TechnologyIconsItem
         Icon={SiJavascript}
         className="bg-black text-[#efd81d]"
         title="JavaScript"
       />
-      <TechnologiesItem Icon={FaSass} className="text-[#c76494]" title="Sass" />
-      <TechnologiesItem
+      <TechnologyIconsItem
+        Icon={FaSass}
+        className="text-[#c76494]"
+        title="Sass"
+      />
+      <TechnologyIconsItem
         Icon={SiTailwindcss}
         className="text-[#38bdf8]"
         title="Tailwind CSS"
       />
-      <TechnologiesItem
+      <TechnologyIconsItem
         Icon={SiReact}
         className="text-[#00d8ff]"
         title="React"
       />
-      <TechnologiesItem
+      <TechnologyIconsItem
         Icon={SiNextdotjs}
         className="text-black dark:text-white"
         title="Next.js"
       />
-      <TechnologiesItem
+      <TechnologyIconsItem
         Icon={SiTypescript}
         className="bg-white text-[#2f74c0]"
         title="TypeScript"
@@ -59,4 +67,4 @@ const Technologies: FC<TechnologiesProps> = ({ className, ...props }) => {
   )
 }
 
-export default Technologies
+export default TechnologyIcons

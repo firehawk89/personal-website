@@ -3,13 +3,15 @@
 import { createContext } from 'react'
 
 type HeaderContextType = {
+  closeMenu: () => void
   isMenuOpened: boolean
-  toggleMenu: () => void
+  openMenu: () => void
 }
 
 const HeaderContext = createContext<HeaderContextType>({
+  closeMenu: () => {},
   isMenuOpened: false,
-  toggleMenu: () => {},
+  openMenu: () => {},
 })
 
 export default HeaderContext

@@ -29,17 +29,20 @@ export const headingVariants = cva('w-fit', {
 
 interface HeadingProps
   extends HTMLAttributes<HTMLHeadingElement>,
-    VariantProps<typeof headingVariants> {}
+    VariantProps<typeof headingVariants> {
+  level?: 1 | 2 | 3 | 4 | 5 | 6
+}
 
 const Heading: FC<HeadingProps> = ({
   children,
   className,
+  level = 1,
   position,
   size,
   variant,
   ...props
 }) => {
-  const HeadingTag = size ? size : 'h1'
+  const HeadingTag: keyof JSX.IntrinsicElements = `h${level}`
 
   return (
     <HeadingTag

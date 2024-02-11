@@ -1,10 +1,13 @@
+import TechnologyIcons from '@/components/sections/about/technology-icons'
 import { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
-import Technologies from '@/components/ui/technologies/technologies'
 import { cn } from '@/utils'
 import Link from 'next/link'
 import { FC, HTMLAttributes } from 'react'
+
+const CV_FILENAME = 'Anton_Bochkovskyi_Front-End_Developer_CV'
+const CV_FILE_EXTENSION = '.pdf'
 
 interface AboutProps extends HTMLAttributes<HTMLDivElement> {}
 
@@ -13,19 +16,18 @@ const About: FC<AboutProps> = ({ className, ...props }) => {
     <section className={cn('bg-light dark:bg-black', className)} {...props}>
       <Content className="flex gap-6 md:gap-10">
         <article>
-          <Heading size="h2" variant="underline">
+          <Heading level={2} size="h2" variant="underline">
             About Me
           </Heading>
-          <div className="mt-6 space-y-4 font-medium md:text-xl">
+          <div className="mt-6 space-y-4 font-medium md:text-lg">
             <p>
               I&apos;m a <strong>Front-End Developer</strong> specializing in
               React, Next.js, and Tailwind CSS, with a keen focus on crafting{' '}
               <b>responsive</b> and visually <b>stunning</b> web applications.
             </p>
             <p>
-              I enjoy working closely with cross-functional teams, including
-              designers and back-end developers, to{' '}
-              <strong>transform ideas into reality</strong>. Clear
+              I enjoy working in team and{' '}
+              <strong>transforming ideas into reality</strong>. Clear
               communication, attention to detail, and a commitment to delivering{' '}
               <b>high-quality</b> code are values I uphold in my works.
             </p>
@@ -40,15 +42,15 @@ const About: FC<AboutProps> = ({ className, ...props }) => {
           </div>
           <Link
             className={cn('mt-6', buttonVariants())}
-            download="Anton_Bochkovskyi_Front-End_Developer_CV"
-            href="/Anton_Bochkovskyi_Front-End_Developer_CV.pdf"
+            download={CV_FILENAME}
+            href={`/${CV_FILENAME}${CV_FILE_EXTENSION}`}
             rel="noreferrer"
             target="_blank"
           >
             Download CV
           </Link>
         </article>
-        <Technologies className="self-start" />
+        <TechnologyIcons className="self-start" />
       </Content>
     </section>
   )

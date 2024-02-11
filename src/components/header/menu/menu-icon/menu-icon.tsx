@@ -9,12 +9,12 @@ import MenuIconBar from './menu-icon-bar'
 interface MenuIconProps extends HTMLAttributes<HTMLDivElement> {}
 
 const MenuIcon: FC<MenuIconProps> = ({ className, ...props }) => {
-  const { isMenuOpened, toggleMenu } = useContext(HeaderContext)
+  const { closeMenu, isMenuOpened, openMenu } = useContext(HeaderContext)
 
   return (
     <div
       className={cn('relative h-5 w-7 cursor-pointer md:static', className)}
-      onClick={toggleMenu}
+      onClick={isMenuOpened ? closeMenu : openMenu}
       {...props}
     >
       <MenuIconBar

@@ -6,3 +6,5 @@ Tailwindcss
 Skauna
 hookform
 sonner
+Bootcamp
+Udemy

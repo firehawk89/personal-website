@@ -1,14 +1,13 @@
-import Link from 'next/link'
 import { ComponentType, FC, LiHTMLAttributes } from 'react'
 import { IconBaseProps } from 'react-icons'
 
-interface SocialsItemProps extends LiHTMLAttributes<HTMLLIElement> {
+interface IconsListItemProps extends LiHTMLAttributes<HTMLLIElement> {
   Icon: ComponentType<IconBaseProps>
   href: string
   title: string
 }
 
-const SocialsItem: FC<SocialsItemProps> = ({
+const IconsListItem: FC<IconsListItemProps> = ({
   Icon,
   className,
   href,
@@ -17,16 +16,21 @@ const SocialsItem: FC<SocialsItemProps> = ({
 }) => {
   return (
     <li className={className} {...props}>
-      <Link
+      <a
         className="transition-colors hover:text-accent"
         href={href}
+        rel="noopener noreferrer"
         target="_blank"
       >
-        <Icon aria-hidden="true" className="h-8 w-8" focusable="false" />
+        <Icon
+          aria-hidden="true"
+          className="h-7 w-7 md:h-8 md:w-8"
+          focusable="false"
+        />
         <span className="sr-only">{title}</span>
-      </Link>
+      </a>
     </li>
   )
 }
 
-export default SocialsItem
+export default IconsListItem

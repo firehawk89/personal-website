@@ -2,7 +2,7 @@
 
 import Menu from '@/components/header/menu/menu'
 import MenuItem from '@/components/header/menu/menu-item'
-import Socials from '@/components/ui/socials/socials'
+import Socials from '@/components/ui/socials'
 import useMediaQuery from '@/hooks/use-media-query'
 import HeaderContext from '@/store/header-context'
 import { MOBILE_BREAKPOINT, cn } from '@/utils'
@@ -17,7 +17,7 @@ const HeaderNavbar: FC<HeaderNavbarProps> = ({ className, ...props }) => {
   return (
     <nav
       className={cn(
-        'fixed left-0 right-0 top-0 z-20 -translate-y-full border-b border-accent bg-light py-8 transition-transform duration-500 dark:bg-dark md:static md:translate-y-0 md:border-none md:bg-transparent md:p-0 md:dark:bg-transparent',
+        'fixed left-0 right-0 top-0 -translate-y-full border-b border-accent bg-light pb-10 pt-20 transition-transform duration-500 dark:bg-dark md:static md:translate-y-0 md:border-none md:bg-transparent md:p-0 md:dark:bg-transparent',
         isMenuOpened && 'translate-y-0',
         className
       )}

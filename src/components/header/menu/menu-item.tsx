@@ -14,10 +14,14 @@ const MenuItem: FC<MenuItemProps> = ({
   href,
   ...props
 }) => {
-  const { toggleMenu } = useContext(HeaderContext)
+  const { closeMenu, isMenuOpened, openMenu } = useContext(HeaderContext)
 
   return (
-    <li className={className} onClick={toggleMenu} {...props}>
+    <li
+      className={className}
+      onClick={isMenuOpened ? closeMenu : openMenu}
+      {...props}
+    >
       <Link
         className="text-lg font-medium transition-colors md:hover:text-accent"
         href={href}
