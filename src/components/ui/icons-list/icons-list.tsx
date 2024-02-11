@@ -1,14 +1,14 @@
 import { cn } from '@/utils'
 import { FC, HTMLAttributes } from 'react'
 
-interface IconsListProps extends HTMLAttributes<HTMLUListElement> {
+export interface IconsListProps extends HTMLAttributes<HTMLUListElement> {
   orientation?: 'horizontal' | 'vertical'
 }
 
 const IconsList: FC<IconsListProps> = ({
   children,
   className,
-  orientation,
+  orientation = 'horizontal',
   ...props
 }) => {
   return (
