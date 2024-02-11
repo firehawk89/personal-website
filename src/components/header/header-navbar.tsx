@@ -2,7 +2,7 @@
 
 import Menu from '@/components/header/menu/menu'
 import MenuItem from '@/components/header/menu/menu-item'
-import Socials from '@/components/ui/socials/socials'
+import Socials from '@/components/ui/socials'
 import useMediaQuery from '@/hooks/use-media-query'
 import HeaderContext from '@/store/header-context'
 import { MOBILE_BREAKPOINT, cn } from '@/utils'

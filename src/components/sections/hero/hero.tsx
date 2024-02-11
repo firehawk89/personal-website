@@ -1,7 +1,7 @@
 import { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
-import Socials from '@/components/ui/socials/socials'
+import Socials from '@/components/ui/socials'
 import { cn } from '@/utils'
 import Link from 'next/link'
 import { FC, HTMLAttributes } from 'react'

@@ -1,4 +1,4 @@
-import Socials from '@/components/ui/socials/socials'
+import Socials from '@/components/ui/socials'
 import { cn } from '@/utils'
 import { FC, HTMLAttributes } from 'react'
 
