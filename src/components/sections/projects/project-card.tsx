@@ -1,5 +1,3 @@
-// TODO: Add projects individual routes
-
 import Card from '@/components/ui/card'
 import Chips from '@/components/ui/chips/chips'
 import ChipsItem from '@/components/ui/chips/chips-item'
@@ -40,11 +38,13 @@ const ProjectCard: FC<ProjectCardProps> = ({
             <Heading level={3} size="h3">
               {title || slug}
             </Heading>
-            <p
-              className="line-clamp-1 sm:line-clamp-2 md:line-clamp-3"
-              dangerouslySetInnerHTML={{ __html: body }}
-            />
-            {technologies && (
+            {body && (
+              <p
+                className="line-clamp-1 sm:line-clamp-2 md:line-clamp-3"
+                dangerouslySetInnerHTML={{ __html: body }}
+              />
+            )}
+            {!!technologies.length && (
               <Chips>
                 {technologies.map((technology) => (
                   <ChipsItem key={technology} label={technology} size="sm" />
