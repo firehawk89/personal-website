@@ -8,7 +8,7 @@ features:
 	'Cluster Map',
 	'Image Upload'
   ]
-technologies: ['JavaScript', 'Node.js', 'Express', 'MongoDB', 'Bootstrap']
+technologies: ['JavaScript', 'Node.js', 'Express', 'EJS', 'MongoDB', 'Bootstrap']
 website: 'https://yelp-camp-1s3s.onrender.com/'
 github: 'https://github.com/firehawk89/YelpCamp'
 ---
