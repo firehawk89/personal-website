@@ -1,7 +1,5 @@
 import ProjectPageChips from '@/components/project-page-chips'
 import Card from '@/components/ui/card'
-import Chips from '@/components/ui/chips/chips'
-import ChipsItem from '@/components/ui/chips/chips-item'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
 import IconsList from '@/components/ui/icons-list/icons-list'
@@ -14,6 +12,15 @@ import { TfiWorld } from 'react-icons/tfi'
 
 type ProjectPageProps = {
   params: { slug: string }
+}
+
+export async function generateMetadata({ params: { slug } }: ProjectPageProps) {
+  const { body, title } = await getProject(slug)
+
+  return {
+    description: body,
+    title,
+  }
 }
 
 export async function generateStaticParams() {
