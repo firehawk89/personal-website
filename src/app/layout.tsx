@@ -1,5 +1,4 @@
 // TODO: Add 404 page
-// TODO: Add Open Graph image
 
 import type { Metadata } from 'next'
 
