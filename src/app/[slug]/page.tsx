@@ -5,6 +5,7 @@ import Heading from '@/components/ui/heading'
 import IconsList from '@/components/ui/icons-list/icons-list'
 import IconsListItem from '@/components/ui/icons-list/icons-list-item'
 import ImagePlaceholder from '@/components/ui/image-placeholder'
+import { SITE_URL } from '@/utils'
 import { getProject, getSlugs } from '@/utils/projects'
 import Image from 'next/image'
 import { FaGithub } from 'react-icons/fa'
@@ -19,6 +20,15 @@ export async function generateMetadata({ params: { slug } }: ProjectPageProps) {
 
   return {
     description: body,
+    openGraph: {
+      images: {
+        alt: `${title || slug}`,
+        height: 630,
+        type: 'image/png',
+        url: `${SITE_URL}/api/og?title=${title || slug}${body && `&description=${body}`}`,
+        width: 1200,
+      },
+    },
     title,
   }
 }
