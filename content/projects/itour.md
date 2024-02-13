@@ -1,7 +1,10 @@
 ---
 title: 'iTour'
 image: '/iTour.jpg'
-features: []
-technologies: ['JavaScript', 'React', 'Next.js', 'TailwindCSS', 'i18n']
+features: [
+	'Internationalization (i18n) Support',
+	'SEO Optimization'
+]
+technologies: ['Next.js', 'React', 'JavaScript', 'i18n', 'TailwindCSS']
 website: 'https://travel-agency-eight-murex.vercel.app/'
 ---
