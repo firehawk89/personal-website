@@ -8,3 +8,5 @@ hookform
 sonner
 Bootcamp
 Udemy
+Csvg
+Cpath
