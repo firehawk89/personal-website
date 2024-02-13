@@ -1,6 +1,7 @@
 'use client'
 
 import HeaderContext from '@/store/header-context'
+import { LINK } from '@/types/enums/Link'
 import { cn } from '@/utils'
 import Link from 'next/link'
 import { AnchorHTMLAttributes, FC, useContext } from 'react'
@@ -13,7 +14,7 @@ const Logo: FC<LogoProps> = ({ className, ...props }) => {
   return (
     <Link
       className={cn('text-3xl font-bold text-accent', className)}
-      href="/"
+      href={LINK.index}
       onClick={closeMenu}
       {...props}
     >
