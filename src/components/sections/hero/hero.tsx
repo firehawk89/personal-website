@@ -2,7 +2,9 @@ import { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
 import Socials from '@/components/ui/socials'
+import { LINK } from '@/types/enums/Link'
 import { cn } from '@/utils'
+import Image from 'next/image'
 import Link from 'next/link'
 import { FC, HTMLAttributes } from 'react'
 
@@ -17,8 +19,15 @@ const Hero: FC<HeroProps> = ({ className, ...props }) => {
       )}
       {...props}
     >
+      <Image
+        alt="Background"
+        className="-z-5 object-cover object-center"
+        fill
+        sizes="100vw"
+        src="/hero-bg.svg"
+      />
       <Content
-        className="flex flex-col items-center justify-center text-center"
+        className="z-5 relative flex flex-col items-center justify-center text-center"
         size="tight"
       >
         <article>
@@ -32,7 +41,7 @@ const Hero: FC<HeroProps> = ({ className, ...props }) => {
         </article>
         <Link
           className={cn('mt-5', buttonVariants({ variant: 'outline' }))}
-          href="/#my-projects"
+          href={LINK.projects}
         >
           My Projects
         </Link>
