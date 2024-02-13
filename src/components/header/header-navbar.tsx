@@ -5,6 +5,7 @@ import MenuItem from '@/components/header/menu/menu-item'
 import Socials from '@/components/ui/socials'
 import useMediaQuery from '@/hooks/use-media-query'
 import HeaderContext from '@/store/header-context'
+import { LINK } from '@/types/enums/Link'
 import { MOBILE_BREAKPOINT, cn } from '@/utils'
 import { FC, HTMLAttributes, useContext } from 'react'
 
@@ -27,9 +28,9 @@ const HeaderNavbar: FC<HeaderNavbarProps> = ({ className, ...props }) => {
         className="mx-auto uppercase"
         orientation={isMobile ? 'vertical' : 'horizontal'}
       >
-        <MenuItem href="/#about-me">About Me</MenuItem>
-        <MenuItem href="/#my-projects">My Projects</MenuItem>
-        <MenuItem href="/#contact-me">Contact Me</MenuItem>
+        <MenuItem href={LINK.about}>About Me</MenuItem>
+        <MenuItem href={LINK.projects}>My Projects</MenuItem>
+        <MenuItem href={LINK.contact}>Contact Me</MenuItem>
       </Menu>
       <Socials className="mt-6 justify-center md:hidden" />
     </nav>
