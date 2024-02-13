@@ -27,7 +27,7 @@ const Hero: FC<HeroProps> = ({ className, ...props }) => {
         src="/hero-bg.svg"
       />
       <Content
-        className="z-5 relative flex flex-col items-center justify-center text-center"
+        className="relative flex flex-col items-center justify-center text-center"
         size="tight"
       >
         <article>
