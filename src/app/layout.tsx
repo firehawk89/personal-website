@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       alt: 'Anton Bochkovskyi - Front-End Developer',
       height: 630,
       type: 'image/png',
-      url: `${SITE_URL}/api/og?title=Anton%20Bochkovskyi%20-%20Front-End%20Developer`,
+      url: `${SITE_URL}/api/og?title=Anton%20Bochkovskyi&description=Front-End%20Developer`,
       width: 1200,
     },
   },
