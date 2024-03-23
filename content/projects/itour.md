@@ -2,8 +2,9 @@
 title: 'iTour'
 image: '/iTour.jpg'
 features: [
+	'SSR',
 	'Internationalization (i18n) Support',
-	'SEO Optimization'
+	'SEO'
 ]
 technologies: ['Next.js', 'React', 'JavaScript', 'i18n', 'TailwindCSS']
 website: 'https://travel-agency-eight-murex.vercel.app/'
