@@ -6,6 +6,7 @@ import IconsList from '@/components/ui/icons-list/icons-list'
 import IconsListItem from '@/components/ui/icons-list/icons-list-item'
 import ImagePlaceholder from '@/components/ui/image-placeholder'
 import { LINK } from '@/types/enums/Link'
+import { PageProps } from '@/types/misc'
 import { SITE_URL } from '@/utils'
 import { getProject, getSlugs } from '@/utils/projects'
 import Image from 'next/image'
@@ -14,11 +15,9 @@ import { BiArrowBack } from 'react-icons/bi'
 import { FaGithub } from 'react-icons/fa'
 import { TfiWorld } from 'react-icons/tfi'
 
-type ProjectPageProps = {
-  params: { slug: string }
-}
+export async function generateMetadata({ params }: PageProps) {
+  const slug = (await params).slug
 
-export async function generateMetadata({ params: { slug } }: ProjectPageProps) {
   const { body, title } = await getProject(slug)
 
   return {
@@ -41,7 +40,9 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }))
 }
 
-export default async function Project({ params: { slug } }: ProjectPageProps) {
+export default async function Project({ params }: PageProps) {
+  const slug = (await params).slug
+
   const { body, features, github, image, technologies, title, website } =
     await getProject(slug)
 

@@ -12,7 +12,7 @@
     "prettier:check": "prettier --check .",
     "prettier:write": "prettier --write .",
     "cspell": "cspell --show-suggestions --show-context --gitignore .",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "dependencies": {
     "@emailjs/nodejs": "^2.2.0",
