@@ -5,6 +5,7 @@
   import Heading from '@/lib/components/ui/Heading.svelte'
   import { Routes } from '@/lib/types/misc'
   import { cn } from '@/lib/utils/misc'
+  import Socials from '@/lib/components/Socials.svelte'
 
   const { class: className, ...props }: HTMLAttributes<HTMLElement> = $props()
 </script>
@@ -36,8 +37,5 @@
     </a>
   </Content>
 
-  <!-- <Socials
-        className="absolute bottom-8 left-8 hidden md:flex"
-        orientation="vertical"
-      /> -->
+  <Socials class="absolute bottom-8 left-8 hidden md:flex" orientation="vertical" />
 </section>
