@@ -18,7 +18,7 @@
     rel="noopener noreferrer"
     target="_blank"
   >
-    <span aria-hidden="true" class={cn('h-7 w-7 md:h-8 md:w-8', icon)}></span>
+    <span aria-hidden="true" class={cn('size-8 md:size-10', icon)}></span>
     <span class="sr-only">{title}</span>
   </a>
 </li>
