@@ -17,7 +17,7 @@
   "dependencies": {
     "@emailjs/nodejs": "^2.2.0",
     "@hookform/resolvers": "^3.3.4",
-    "@vercel/analytics": "^1.2.2",
+    "@vercel/analytics": "^1.5.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "gray-matter": "^4.0.3",
