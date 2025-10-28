@@ -49,7 +49,7 @@ export default async function Project({ params }: PageProps) {
 
   return (
     <section className="pt-header">
-      <Content className="pb-16 pt-12 md:pb-24 md:pt-20" size="tight">
+      <Content className="pt-12 pb-16 md:pt-20 md:pb-24" size="tight">
         <Link
           className="group flex items-center gap-2 text-accent transition-colors hover:text-accent-light md:text-lg"
           href={LINK.projects}

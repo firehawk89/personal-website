@@ -20,7 +20,7 @@ const HeaderNavbar: FC<HTMLAttributes<HTMLDivElement>> = ({
   return (
     <nav
       className={cn(
-        'fixed left-0 right-0 top-0 -translate-y-full border-b border-accent bg-light pb-10 pt-20 transition-transform duration-500 *:opacity-0 *:transition-opacity dark:bg-dark md:static md:translate-y-0 md:border-none md:bg-transparent md:p-0 md:*:opacity-100 md:dark:bg-transparent',
+        'fixed top-0 right-0 left-0 -translate-y-full border-b border-accent bg-light pt-20 pb-10 transition-transform duration-500 *:opacity-0 *:transition-opacity md:static md:translate-y-0 md:border-none md:bg-transparent md:p-0 md:*:opacity-100 dark:bg-dark md:dark:bg-transparent',
         isMenuOpened && 'translate-y-0 *:opacity-100',
         className
       )}

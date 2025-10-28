@@ -5,6 +5,7 @@ import perfectionist from 'eslint-plugin-perfectionist'
 import pluginReact from 'eslint-plugin-react'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
+import eslintConfigPrettier from 'eslint-config-prettier/flat'
 
 export default defineConfig([
   {
@@ -33,8 +34,21 @@ export default defineConfig([
       'perfectionist/sort-imports': 'error',
     },
   },
+  eslintConfigPrettier,
   { rules: { 'react/react-in-jsx-scope': 'off' } },
   {
-    ignores: ['*.config.*', '.lintstagedrc.js'],
+    ignores: [
+      'node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      'public/**',
+      'coverage/**',
+      'pnpm-lock.yaml',
+      'package-lock.json',
+      'yarn.lock',
+	  '*.config.*',
+      '.lintstagedrc.*',
+    ],
   },
 ])

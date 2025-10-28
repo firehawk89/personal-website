@@ -1,0 +1,11 @@
+*.config.*
+.lintstagedrc.*
+node_modules/**
+.next/**
+dist/**
+build/**
+public/**
+coverage/**
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
