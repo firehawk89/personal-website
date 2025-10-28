@@ -39,7 +39,7 @@ export default function RootLayout({
       <body className={cn('flex min-h-screen flex-col', raleway.className)}>
         <Providers>
           <Header />
-          <main className="flex-shrink flex-grow basis-0">{children}</main>
+          <main className="shrink grow basis-0">{children}</main>
           <Footer />
         </Providers>
         <Analytics />

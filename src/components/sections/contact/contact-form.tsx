@@ -59,6 +59,7 @@ const ContactForm: FC<FormHTMLAttributes<HTMLFormElement>> = ({
         className
       )}
       onSubmit={handleSubmit(onSubmit)}
+      noValidate
       {...props}
     >
       <FormItem error={errors.name?.message}>

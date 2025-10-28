@@ -5,7 +5,7 @@ import { Path, UseFormRegister } from 'react-hook-form'
 import { ContactFormInputs, cn } from '@/utils'
 
 export const inputVariants = cva(
-  'w-full transition-colors outline-none md:text-lg',
+  'w-full transition-colors outline-hidden md:text-lg',
   {
     defaultVariants: {
       customSize: 'default',
@@ -58,7 +58,7 @@ const Input: FC<InputProps> = ({
             {...register(name)}
             {...props}
           />
-          <span className="pointer-events-none absolute left-4 top-1/2 z-0 -translate-y-1/2 transition-all peer-focus:top-2 peer-focus:translate-y-0 peer-focus:text-xs peer-focus:leading-none peer-focus:text-accent peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:leading-none">
+          <span className="pointer-events-none absolute top-1/2 left-4 z-0 -translate-y-1/2 transition-all peer-focus:top-2 peer-focus:translate-y-0 peer-focus:text-xs peer-focus:leading-none peer-focus:text-accent peer-[:not(:placeholder-shown)]:top-2 peer-[:not(:placeholder-shown)]:translate-y-0 peer-[:not(:placeholder-shown)]:text-xs peer-[:not(:placeholder-shown)]:leading-none">
             {placeholder}
           </span>
         </div>

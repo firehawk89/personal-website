@@ -9,7 +9,7 @@ const MenuIconBar: FC<HTMLAttributes<HTMLSpanElement>> = ({
   return (
     <span
       className={cn(
-        'absolute left-0 right-0 block h-0.5 w-full rounded-sm bg-dark transition-all dark:bg-light',
+        'absolute right-0 left-0 block h-0.5 w-full rounded-xs bg-dark transition-all dark:bg-light',
         className
       )}
       {...props}

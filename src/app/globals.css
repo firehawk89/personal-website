@@ -1,6 +1,32 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --shadow-blur: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+  --color-accent: #ff5100;
+  --color-accent-light: #ff621a;
+  --color-dark: #1a1a1a;
+  --color-ghost: #f7f7ff;
+  --color-light: #fff;
+
+  --font-text: var(--font-text);
+
+  --padding-header: var(--header-height);
+
+  --scroll-padding-header: var(--header-height);
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 :root {
   --header-height: 4.25rem;
@@ -19,10 +45,10 @@ body {
 }
 
 .menu-icon {
-  @apply before:absolute before:left-0 before:top-0 before:h-0.5 after:h-0.5;
+  @apply before:absolute before:top-0 before:left-0 before:h-0.5 after:h-0.5;
 }
 
-@media (min-width: theme('screens.md')) {
+@media (min-width: --theme(--breakpoint-md)) {
   html {
     --header-height: 3.75rem;
   }

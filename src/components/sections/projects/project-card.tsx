@@ -35,7 +35,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
           ) : (
             <ImagePlaceholder />
           )}
-          <div className="absolute left-0 top-0 flex h-full w-full flex-col justify-end gap-3 bg-gradient-to-t from-dark p-4 text-light opacity-0 transition-all group-hover:opacity-100 sm:gap-5 sm:px-6 sm:py-7">
+          <div className="absolute top-0 left-0 flex h-full w-full flex-col justify-end gap-3 bg-linear-to-t from-dark p-4 text-light opacity-0 transition-all group-hover:opacity-100 sm:gap-5 sm:px-6 sm:py-7">
             <Heading level={3} size="h3">
               {title || slug}
             </Heading>

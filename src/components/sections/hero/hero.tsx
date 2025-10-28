@@ -13,14 +13,14 @@ const Hero: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
   return (
     <section
       className={cn(
-        'relative h-[100dvh] bg-ghost pt-header dark:bg-dark',
+        'relative h-dvh bg-ghost pt-header dark:bg-dark',
         className
       )}
       {...props}
     >
       <Image
         alt="Background"
-        className="-z-5 object-cover object-center"
+        className="z-0 object-cover object-center"
         fill
         sizes="100vw"
         src="/hero-bg.svg"

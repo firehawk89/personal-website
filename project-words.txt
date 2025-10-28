@@ -11,3 +11,4 @@ Udemy
 Csvg
 Cpath
 Logindariy
+turbopack

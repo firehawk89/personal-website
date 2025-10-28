@@ -20,7 +20,7 @@ const TechnologyIcons: FC<HTMLAttributes<HTMLUListElement>> = ({
   return (
     <ul
       className={cn(
-        'grid flex-shrink-0 grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-3',
+        'grid shrink-0 grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-3',
         className
       )}
       {...props}
