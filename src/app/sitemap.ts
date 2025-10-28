@@ -1,6 +1,7 @@
+import { MetadataRoute } from 'next'
+
 import { SITE_URL } from '@/utils'
 import { getProjectsMetadata } from '@/utils/projects'
-import { MetadataRoute } from 'next'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projectsMetadata = await getProjectsMetadata()

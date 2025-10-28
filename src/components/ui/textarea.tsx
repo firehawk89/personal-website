@@ -1,8 +1,9 @@
-import { inputVariants } from '@/components/ui/input'
-import { ContactFormInputs, cn } from '@/utils'
 import { VariantProps } from 'class-variance-authority'
 import { FC, TextareaHTMLAttributes } from 'react'
 import { Path, UseFormRegister } from 'react-hook-form'
+
+import { inputVariants } from '@/components/ui/input'
+import { ContactFormInputs, cn } from '@/utils'
 
 export interface TextareaProps
   extends TextareaHTMLAttributes<HTMLTextAreaElement>,
@@ -17,7 +18,6 @@ const Textarea: FC<TextareaProps> = ({
   name,
   placeholder,
   register,
-  required,
   variant,
   ...props
 }) => {

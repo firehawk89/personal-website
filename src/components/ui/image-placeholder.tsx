@@ -1,10 +1,9 @@
-import { cn } from '@/utils'
 import { FC, HTMLAttributes } from 'react'
 import { CiImageOff } from 'react-icons/ci'
 
-interface ImagePlaceholderProps extends HTMLAttributes<HTMLDivElement> {}
+import { cn } from '@/utils'
 
-const ImagePlaceholder: FC<ImagePlaceholderProps> = ({
+const ImagePlaceholder: FC<HTMLAttributes<HTMLDivElement>> = ({
   className,
   ...props
 }) => {

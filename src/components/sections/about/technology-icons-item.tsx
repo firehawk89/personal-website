@@ -1,6 +1,7 @@
-import { cn } from '@/utils'
 import { ComponentType, FC, HTMLAttributes } from 'react'
 import { IconBaseProps } from 'react-icons'
+
+import { cn } from '@/utils'
 
 interface TechnologyIconsItemProps extends HTMLAttributes<HTMLLIElement> {
   Icon: ComponentType<IconBaseProps>

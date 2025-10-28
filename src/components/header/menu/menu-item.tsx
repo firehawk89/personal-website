@@ -1,8 +1,9 @@
 'use client'
 
-import HeaderContext from '@/store/header-context'
 import Link from 'next/link'
 import { FC, LiHTMLAttributes, useContext } from 'react'
+
+import HeaderContext from '@/store/header-context'
 
 interface MenuItemProps extends LiHTMLAttributes<HTMLLIElement> {
   href: string

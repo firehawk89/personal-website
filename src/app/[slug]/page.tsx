@@ -1,3 +1,9 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { BiArrowBack } from 'react-icons/bi'
+import { FaGithub } from 'react-icons/fa'
+import { TfiWorld } from 'react-icons/tfi'
+
 import ProjectPageChips from '@/components/project-page-chips'
 import Card from '@/components/ui/card'
 import Content from '@/components/ui/content'
@@ -9,11 +15,6 @@ import { LINK } from '@/types/enums/Link'
 import { PageProps } from '@/types/misc'
 import { SITE_URL } from '@/utils'
 import { getProject, getSlugs } from '@/utils/projects'
-import Image from 'next/image'
-import Link from 'next/link'
-import { BiArrowBack } from 'react-icons/bi'
-import { FaGithub } from 'react-icons/fa'
-import { TfiWorld } from 'react-icons/tfi'
 
 export async function generateMetadata({ params }: PageProps) {
   const slug = (await params).slug

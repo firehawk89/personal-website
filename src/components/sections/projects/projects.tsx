@@ -1,14 +1,16 @@
+import { FC, HTMLAttributes } from 'react'
+
 import ProjectCard from '@/components/sections/projects/project-card'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
 import Project from '@/types/Project'
 import { cn } from '@/utils'
 import { getProjects } from '@/utils/projects'
-import { FC, HTMLAttributes } from 'react'
 
-interface ProjectsProps extends HTMLAttributes<HTMLDivElement> {}
-
-const Projects: FC<ProjectsProps> = async ({ className, ...props }) => {
+const Projects: FC<HTMLAttributes<HTMLDivElement>> = async ({
+  className,
+  ...props
+}) => {
   const projects: Project[] = await getProjects()
 
   return (

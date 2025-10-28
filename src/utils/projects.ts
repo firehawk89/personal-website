@@ -1,10 +1,11 @@
-import Project from '@/types/Project'
-import ProjectMetadata from '@/types/ProjectMetadata'
 import fs from 'fs'
 import { readFile, readdir } from 'fs/promises'
 import matter from 'gray-matter'
 import { marked } from 'marked'
 import path from 'path'
+
+import Project from '@/types/Project'
+import ProjectMetadata from '@/types/ProjectMetadata'
 
 const PROJECTS_PATH = './content/projects'
 const FILE_EXTENSION = '.md'
@@ -13,7 +14,7 @@ const DIR_PATH = path.join(process.cwd(), PROJECTS_PATH)
 export const getProjects = async (): Promise<Project[]> => {
   const slugs = await getSlugs()
 
-  let projects: Project[] = []
+  const projects: Project[] = []
 
   if (!slugs.length) return projects
 
@@ -54,7 +55,7 @@ export const getProject = async (slug: string): Promise<Project> => {
 export const getProjectsMetadata = async (): Promise<ProjectMetadata[]> => {
   const slugs = await getSlugs()
 
-  let projectsMetadata: ProjectMetadata[] = []
+  const projectsMetadata: ProjectMetadata[] = []
 
   if (!slugs.length) return projectsMetadata
 

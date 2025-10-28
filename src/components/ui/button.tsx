@@ -1,6 +1,7 @@
-import { cn } from '@/utils'
 import { VariantProps, cva } from 'class-variance-authority'
 import { ButtonHTMLAttributes, FC } from 'react'
+
+import { cn } from '@/utils'
 
 export const buttonVariants = cva(
   'font-medium transition-all active:scale-95 md:text-lg disabled:pointer-events-none',

@@ -1,10 +1,11 @@
 import type { Metadata } from 'next'
 
+import { Analytics } from '@vercel/analytics/react'
+
 import Footer from '@/components/footer'
 import Header from '@/components/header/header'
 import Providers from '@/store/providers'
 import { SITE_URL, cn } from '@/utils'
-import { Analytics } from '@vercel/analytics/react'
 
 import { raleway } from './fonts'
 import './globals.css'

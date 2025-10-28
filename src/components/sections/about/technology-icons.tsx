@@ -1,5 +1,3 @@
-import TechnologyIconsItem from '@/components/sections/about/technology-icons-item'
-import { cn } from '@/utils'
 import { FC, HTMLAttributes } from 'react'
 import { FaSass } from 'react-icons/fa'
 import {
@@ -12,9 +10,13 @@ import {
   SiTypescript,
 } from 'react-icons/si'
 
-interface TechnologyIconsProps extends HTMLAttributes<HTMLUListElement> {}
+import TechnologyIconsItem from '@/components/sections/about/technology-icons-item'
+import { cn } from '@/utils'
 
-const TechnologyIcons: FC<TechnologyIconsProps> = ({ className, ...props }) => {
+const TechnologyIcons: FC<HTMLAttributes<HTMLUListElement>> = ({
+  className,
+  ...props
+}) => {
   return (
     <ul
       className={cn(

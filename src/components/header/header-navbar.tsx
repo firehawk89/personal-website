@@ -1,5 +1,7 @@
 'use client'
 
+import { FC, HTMLAttributes, useContext } from 'react'
+
 import Menu from '@/components/header/menu/menu'
 import MenuItem from '@/components/header/menu/menu-item'
 import Socials from '@/components/ui/socials'
@@ -7,11 +9,11 @@ import useMediaQuery from '@/hooks/use-media-query'
 import HeaderContext from '@/store/header-context'
 import { LINK } from '@/types/enums/Link'
 import { MOBILE_BREAKPOINT, cn } from '@/utils'
-import { FC, HTMLAttributes, useContext } from 'react'
 
-interface HeaderNavbarProps extends HTMLAttributes<HTMLDivElement> {}
-
-const HeaderNavbar: FC<HeaderNavbarProps> = ({ className, ...props }) => {
+const HeaderNavbar: FC<HTMLAttributes<HTMLDivElement>> = ({
+  className,
+  ...props
+}) => {
   const { isMenuOpened } = useContext(HeaderContext)
   const isMobile = useMediaQuery(MOBILE_BREAKPOINT)
 

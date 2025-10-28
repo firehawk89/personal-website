@@ -1,14 +1,13 @@
 'use client'
 
-import Button, { ButtonProps } from '@/components/ui/button'
-import Theme from '@/types/enums/Theme'
 import { useTheme } from 'next-themes'
 import { FC, useEffect, useState } from 'react'
 import { CiDark, CiLight } from 'react-icons/ci'
 
-interface ThemeTogglerProps extends ButtonProps {}
+import Button, { ButtonProps } from '@/components/ui/button'
+import Theme from '@/types/enums/Theme'
 
-const ThemeToggler: FC<ThemeTogglerProps> = ({ className, ...props }) => {
+const ThemeToggler: FC<ButtonProps> = ({ className, ...props }) => {
   const [mounted, setMounted] = useState<boolean>(false)
   const { resolvedTheme, setTheme } = useTheme()
   const isDarkTheme = (resolvedTheme as Theme) === 'dark'

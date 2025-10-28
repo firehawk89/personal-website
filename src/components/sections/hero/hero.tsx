@@ -1,16 +1,15 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { FC, HTMLAttributes } from 'react'
+
 import { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
 import Socials from '@/components/ui/socials'
 import { LINK } from '@/types/enums/Link'
 import { cn } from '@/utils'
-import Image from 'next/image'
-import Link from 'next/link'
-import { FC, HTMLAttributes } from 'react'
 
-interface HeroProps extends HTMLAttributes<HTMLDivElement> {}
-
-const Hero: FC<HeroProps> = ({ className, ...props }) => {
+const Hero: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
   return (
     <section
       className={cn(

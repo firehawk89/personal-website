@@ -1,9 +1,10 @@
 'use client'
 
+import { FC, ReactNode, useCallback, useEffect, useState } from 'react'
+
 import useMediaQuery from '@/hooks/use-media-query'
 import HeaderContext from '@/store/header-context'
 import { MOBILE_BREAKPOINT } from '@/utils'
-import { FC, ReactNode, useCallback, useEffect, useState } from 'react'
 
 type HeaderProviderProps = {
   children: ReactNode

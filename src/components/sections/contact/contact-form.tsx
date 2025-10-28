@@ -1,5 +1,10 @@
 'use client'
 
+import { zodResolver } from '@hookform/resolvers/zod'
+import { FC, FormHTMLAttributes, useState } from 'react'
+import { SubmitHandler, useForm } from 'react-hook-form'
+import { toast } from 'sonner'
+
 import { sendEmail } from '@/app/actions'
 import Button from '@/components/ui/button'
 import FormItem from '@/components/ui/form-item'
@@ -7,14 +12,11 @@ import Input from '@/components/ui/input'
 import Label from '@/components/ui/label'
 import Textarea from '@/components/ui/textarea'
 import { ContactFormInputs, ContactFormSchema, cn } from '@/utils'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { FC, FormHTMLAttributes, useState } from 'react'
-import { SubmitHandler, useForm } from 'react-hook-form'
-import { toast } from 'sonner'
 
-interface ContactFormProps extends FormHTMLAttributes<HTMLFormElement> {}
-
-const ContactForm: FC<ContactFormProps> = ({ className, ...props }) => {
+const ContactForm: FC<FormHTMLAttributes<HTMLFormElement>> = ({
+  className,
+  ...props
+}) => {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
   const {
     formState: { errors },

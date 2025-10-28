@@ -1,5 +1,6 @@
-import { cn } from '@/utils'
 import { FC, HTMLAttributes } from 'react'
+
+import { cn } from '@/utils'
 
 export interface IconsListProps extends HTMLAttributes<HTMLUListElement> {
   orientation?: 'horizontal' | 'vertical'

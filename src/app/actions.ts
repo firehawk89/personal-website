@@ -1,7 +1,8 @@
 'use server'
 
-import { ContactFormInputs, ContactFormSchema } from '@/utils'
 import emailjs, { EmailJSResponseStatus } from '@emailjs/nodejs'
+
+import { ContactFormInputs, ContactFormSchema } from '@/utils'
 
 export const sendEmail = async (data: ContactFormInputs) => {
   const dataParseResult = ContactFormSchema.safeParse(data)

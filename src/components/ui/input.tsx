@@ -1,7 +1,8 @@
-import { ContactFormInputs, cn } from '@/utils'
 import { VariantProps, cva } from 'class-variance-authority'
 import { FC, InputHTMLAttributes } from 'react'
 import { Path, UseFormRegister } from 'react-hook-form'
+
+import { ContactFormInputs, cn } from '@/utils'
 
 export const inputVariants = cva(
   'w-full transition-colors outline-none md:text-lg',
@@ -38,7 +39,6 @@ const Input: FC<InputProps> = ({
   name,
   placeholder,
   register,
-  required,
   variant,
   ...props
 }) => {

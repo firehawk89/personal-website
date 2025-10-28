@@ -1,9 +1,11 @@
-import { cn } from '@/utils'
 import { FC, HTMLAttributes } from 'react'
 
-export interface ChipsProps extends HTMLAttributes<HTMLUListElement> {}
+import { cn } from '@/utils'
 
-const Chips: FC<ChipsProps> = ({ children, className }) => {
+const Chips: FC<HTMLAttributes<HTMLUListElement>> = ({
+  children,
+  className,
+}) => {
   return <ul className={cn('flex flex-wrap gap-2', className)}>{children}</ul>
 }
 

@@ -1,6 +1,7 @@
-import { cn } from '@/utils'
 import { VariantProps, cva } from 'class-variance-authority'
 import { FC, HTMLAttributes } from 'react'
+
+import { cn } from '@/utils'
 
 export const headingVariants = cva('w-fit', {
   defaultVariants: {

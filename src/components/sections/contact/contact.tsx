@@ -1,12 +1,14 @@
+import { FC, HTMLAttributes } from 'react'
+
 import ContactForm from '@/components/sections/contact/contact-form'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
 import { cn } from '@/utils'
-import { FC, HTMLAttributes } from 'react'
 
-interface ContactProps extends HTMLAttributes<HTMLDivElement> {}
-
-const Contact: FC<ContactProps> = ({ className, ...props }) => {
+const Contact: FC<HTMLAttributes<HTMLDivElement>> = ({
+  className,
+  ...props
+}) => {
   return (
     <section className={cn('bg-light dark:bg-black', className)} {...props}>
       <Content size="tight">

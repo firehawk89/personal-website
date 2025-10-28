@@ -1,17 +1,16 @@
+import Link from 'next/link'
+import { FC, HTMLAttributes } from 'react'
+
 import TechnologyIcons from '@/components/sections/about/technology-icons'
 import { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
 import { cn } from '@/utils'
-import Link from 'next/link'
-import { FC, HTMLAttributes } from 'react'
 
 const CV_FILENAME = 'Anton_Bochkovskyi_Front-End_Developer_CV'
 const CV_FILE_EXTENSION = '.pdf'
 
-interface AboutProps extends HTMLAttributes<HTMLDivElement> {}
-
-const About: FC<AboutProps> = ({ className, ...props }) => {
+const About: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
   return (
     <section className={cn('bg-light dark:bg-black', className)} {...props}>
       <Content className="flex gap-6 md:gap-10">

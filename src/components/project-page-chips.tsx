@@ -1,12 +1,13 @@
 'use client'
 
-import Chips, { ChipsProps } from '@/components/ui/chips/chips'
+import { FC, HTMLAttributes } from 'react'
+
+import Chips from '@/components/ui/chips/chips'
 import ChipsItem from '@/components/ui/chips/chips-item'
 import useMediaQuery from '@/hooks/use-media-query'
 import { MOBILE_BREAKPOINT } from '@/utils'
-import { FC } from 'react'
 
-interface ProjectPageChipsProps extends ChipsProps {
+interface ProjectPageChipsProps extends HTMLAttributes<HTMLUListElement> {
   data: string[]
 }
 

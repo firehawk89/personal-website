@@ -1,3 +1,7 @@
+import Image from 'next/image'
+import Link from 'next/link'
+import { FC, HTMLAttributes } from 'react'
+
 import Card from '@/components/ui/card'
 import Chips from '@/components/ui/chips/chips'
 import ChipsItem from '@/components/ui/chips/chips-item'
@@ -5,9 +9,6 @@ import Heading from '@/components/ui/heading'
 import ImagePlaceholder from '@/components/ui/image-placeholder'
 import Project from '@/types/Project'
 import { cn } from '@/utils'
-import Image from 'next/image'
-import Link from 'next/link'
-import { FC, HTMLAttributes } from 'react'
 
 interface ProjectCardProps extends HTMLAttributes<HTMLDivElement> {
   data: Project

@@ -1,6 +1,7 @@
-import { cn } from '@/utils'
 import { VariantProps, cva } from 'class-variance-authority'
 import { FC, LiHTMLAttributes } from 'react'
+
+import { cn } from '@/utils'
 
 const chipsItemVariants = cva(
   'bg-accent bg-opacity-75 font-semibold text-light',

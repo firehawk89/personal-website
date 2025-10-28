@@ -1,10 +1,9 @@
-import Socials from '@/components/ui/socials'
-import { cn } from '@/utils'
 import { FC, HTMLAttributes } from 'react'
 
-interface FooterProps extends HTMLAttributes<HTMLDivElement> {}
+import Socials from '@/components/ui/socials'
+import { cn } from '@/utils'
 
-const Footer: FC<FooterProps> = ({ className }) => {
+const Footer: FC<HTMLAttributes<HTMLDivElement>> = ({ className }) => {
   return (
     <footer
       className={cn(

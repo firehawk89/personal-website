@@ -1,9 +1,11 @@
-import { cn } from '@/utils'
 import { FC, HTMLAttributes } from 'react'
 
-interface MenuIconBarProps extends HTMLAttributes<HTMLSpanElement> {}
+import { cn } from '@/utils'
 
-const MenuIconBar: FC<MenuIconBarProps> = ({ className, ...props }) => {
+const MenuIconBar: FC<HTMLAttributes<HTMLSpanElement>> = ({
+  className,
+  ...props
+}) => {
   return (
     <span
       className={cn(

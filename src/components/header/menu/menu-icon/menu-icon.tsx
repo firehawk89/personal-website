@@ -1,14 +1,16 @@
 'use client'
 
+import { FC, HTMLAttributes, useContext } from 'react'
+
 import HeaderContext from '@/store/header-context'
 import { cn } from '@/utils'
-import { FC, HTMLAttributes, useContext } from 'react'
 
 import MenuIconBar from './menu-icon-bar'
 
-interface MenuIconProps extends HTMLAttributes<HTMLDivElement> {}
-
-const MenuIcon: FC<MenuIconProps> = ({ className, ...props }) => {
+const MenuIcon: FC<HTMLAttributes<HTMLDivElement>> = ({
+  className,
+  ...props
+}) => {
   const { closeMenu, isMenuOpened, openMenu } = useContext(HeaderContext)
 
   return (

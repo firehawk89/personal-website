@@ -1,9 +1,12 @@
-import { cn } from '@/utils'
 import { FC, HTMLAttributes } from 'react'
 
-interface CardProps extends HTMLAttributes<HTMLDivElement> {}
+import { cn } from '@/utils'
 
-const Card: FC<CardProps> = ({ children, className, ...props }) => {
+const Card: FC<HTMLAttributes<HTMLDivElement>> = ({
+  children,
+  className,
+  ...props
+}) => {
   return (
     <div
       className={cn('overflow-hidden rounded-lg shadow-md', className)}

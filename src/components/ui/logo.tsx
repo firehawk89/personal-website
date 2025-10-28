@@ -1,14 +1,16 @@
 'use client'
 
-import HeaderContext from '@/store/header-context'
-import { LINK } from '@/types/enums/Link'
-import { cn } from '@/utils'
 import Link from 'next/link'
 import { AnchorHTMLAttributes, FC, useContext } from 'react'
 
-interface LogoProps extends AnchorHTMLAttributes<HTMLAnchorElement> {}
+import HeaderContext from '@/store/header-context'
+import { LINK } from '@/types/enums/Link'
+import { cn } from '@/utils'
 
-const Logo: FC<LogoProps> = ({ className, ...props }) => {
+const Logo: FC<AnchorHTMLAttributes<HTMLAnchorElement>> = ({
+  className,
+  ...props
+}) => {
   const { closeMenu } = useContext(HeaderContext)
 
   return (

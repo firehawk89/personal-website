@@ -1,9 +1,12 @@
-import { cn } from '@/utils'
 import { FC, LabelHTMLAttributes } from 'react'
 
-interface LabelProps extends LabelHTMLAttributes<HTMLLabelElement> {}
+import { cn } from '@/utils'
 
-const Label: FC<LabelProps> = ({ children, className, ...props }) => {
+const Label: FC<LabelHTMLAttributes<HTMLLabelElement>> = ({
+  children,
+  className,
+  ...props
+}) => {
   return (
     <label className={cn('font-medium md:text-lg', className)} {...props}>
       {children}

@@ -29,11 +29,37 @@ export async function GET(request: Request) {
     return new ImageResponse(
       (
         <div
-          style={{ fontFamily: 'Raleway' }}
-          tw="relative w-full h-full flex flex-col items-center justify-center bg-[#f7f7ff] text-center text-[#1a1a1a]"
+          style={{
+            fontFamily: 'Raleway',
+            position: 'relative',
+            width: '100%',
+            height: '100%',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: '#f7f7ff',
+            textAlign: 'center',
+            color: '#1a1a1a',
+          }}
         >
-          <h1 tw="text-7xl font-semibold">{title}</h1>
-          <p tw="mt-3 text-4xl font-medium">{description}</p>
+          <h1
+            style={{
+              fontSize: '4.5rem',
+              fontWeight: '600',
+            }}
+          >
+            {title}
+          </h1>
+          <p
+            style={{
+              marginTop: '12px',
+              fontSize: '2.25rem',
+              fontWeight: '500',
+            }}
+          >
+            {description}
+          </p>
           <img
             alt="OG Background"
             src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'
@@ -1455,8 +1481,14 @@ export async function GET(request: Request) {
             style={{
               objectFit: 'cover',
               objectPosition: 'center',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              width: '100%',
+              height: '100%',
             }}
-            tw="absolute top-0 left-0 right-0 bottom-0 w-full h-full"
           />
         </div>
       ),

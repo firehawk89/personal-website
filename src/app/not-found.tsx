@@ -1,10 +1,11 @@
+import Image from 'next/image'
+import Link from 'next/link'
+
 import { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
 import Heading from '@/components/ui/heading'
 import { LINK } from '@/types/enums/Link'
 import { cn } from '@/utils'
-import Image from 'next/image'
-import Link from 'next/link'
 
 export default function NotFound() {
   return (

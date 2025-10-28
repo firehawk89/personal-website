@@ -1,15 +1,17 @@
+import { FC, HTMLAttributes } from 'react'
+
 import HeaderNavbar from '@/components/header/header-navbar'
 import Content from '@/components/ui/content'
 import Logo from '@/components/ui/logo'
 import ThemeToggler from '@/components/ui/theme-toggler'
 import { cn } from '@/utils'
-import { FC, HTMLAttributes } from 'react'
 
 import MenuIcon from './menu/menu-icon/menu-icon'
 
-interface HeaderProps extends HTMLAttributes<HTMLDivElement> {}
-
-const Header: FC<HeaderProps> = ({ className, ...props }) => {
+const Header: FC<HTMLAttributes<HTMLDivElement>> = ({
+  className,
+  ...props
+}) => {
   return (
     <header
       className={cn(

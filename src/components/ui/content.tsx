@@ -1,6 +1,7 @@
-import { cn } from '@/utils'
 import { VariantProps, cva } from 'class-variance-authority'
 import { FC, HTMLAttributes } from 'react'
+
+import { cn } from '@/utils'
 
 const contentVariants = cva('mx-auto h-full w-full', {
   defaultVariants: {

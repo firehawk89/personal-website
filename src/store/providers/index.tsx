@@ -1,6 +1,7 @@
+import { FC, ReactNode } from 'react'
+
 import Toaster from '@/components/ui/toaster'
 import ThemeProvider from '@/store/providers/theme-provider'
-import { FC, ReactNode } from 'react'
 
 import HeaderProvider from './header-provider'
 
