@@ -1,17 +1,24 @@
 const path = require('node:path')
 
-const relative = (files) =>
+const getRelativePaths = (files) =>
   files.map((file) => path.relative(process.cwd(), file))
 
-const buildEslintCommand = (filenames) =>
-  `next lint --fix --file ${relative(filenames).join(' --file ')}`
+const filterNonConfigFiles = (files) =>
+  files.filter(
+    (file) => !file.includes('.config.') && !file.includes('.lintstagedrc')
+  )
 
-module.exports = {
-  '*.{js,jsx,ts,tsx}': [buildEslintCommand],
-  '*.{js,ts}': () => 'npm run typescript:check',
+const config = {
+  '*.{js,jsx,ts,tsx}': (files) => {
+    const filteredFiles = filterNonConfigFiles(files)
+    return filteredFiles.length > 0
+      ? `eslint --fix ${getRelativePaths(filteredFiles).join(' ')}`
+      : []
+  },
+  '*.{js,ts}': () => 'tsc -p tsconfig.json',
   '*': 'prettier --write --ignore-unknown',
   '*.{js,jsx,ts,tsx,md,css,scss,json}': (files) =>
-    `cspell --show-suggestions --quiet --gitignore ${relative(files).join(
-      ' '
-    )}`,
+    `cspell --show-suggestions --quiet --gitignore ${getRelativePaths(files).join(' ')}`,
 }
+
+module.exports = config
