@@ -12,20 +12,20 @@ import './globals.css'
 
 export const metadata: Metadata = {
   description:
-    "Hi, my name is Anton Bochkovskyi and I'm a Front-End Developer specializing in React, Next.js, and Tailwind CSS, with a keen focus on crafting responsive and visually stunning web applications.",
+    "Hi, my name is Anton Bochkovskyi and I'm a Full-Stack Developer focused on scalable web apps, AI platforms, and cloud-based systems - from frontend UX to serverless backends and deployment workflows.",
   metadataBase: new URL(SITE_URL),
   openGraph: {
     images: {
-      alt: 'Anton Bochkovskyi - Front-End Developer',
+      alt: 'Anton Bochkovskyi - Full-Stack Developer',
       height: 630,
       type: 'image/png',
-      url: `${SITE_URL}/api/og?title=Anton%20Bochkovskyi&description=Front-End%20Developer`,
+      url: `${SITE_URL}/api/og?title=Anton%20Bochkovskyi&description=Full-Stack%20Developer`,
       width: 1200,
     },
   },
   title: {
-    default: 'Anton Bochkovskyi - Front-End Developer',
-    template: '%s | Anton Bochkovskyi - Front-End Developer',
+    default: 'Anton Bochkovskyi - Full-Stack Developer',
+    template: '%s | Anton Bochkovskyi - Full-Stack Developer',
   },
 }
 

@@ -3,10 +3,12 @@ Bootcamp
 clsx
 Cpath
 Csvg
+frontends
 hookform
 lintstagedrc
 Logindariy
 Nextdotjs
+Nodedotjs
 raleway
 Skauna
 sonner

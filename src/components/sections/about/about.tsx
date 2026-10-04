@@ -1,14 +1,10 @@
-import Link from 'next/link'
 import { FC, HTMLAttributes } from 'react'
 
 import TechnologyIcons from '@/components/sections/about/technology-icons'
-import { buttonVariants } from '@/components/ui/button'
 import Content from '@/components/ui/content'
+import DownloadCVButton from '@/components/ui/download-cv-button'
 import Heading from '@/components/ui/heading'
 import { cn } from '@/utils'
-
-const CV_FILENAME = 'Anton_Bochkovskyi_Front-End_Developer_CV'
-const CV_FILE_EXTENSION = '.pdf'
 
 const About: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
   return (
@@ -20,34 +16,26 @@ const About: FC<HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => {
           </Heading>
           <div className="mt-6 space-y-4 font-medium md:text-lg">
             <p>
-              I&apos;m a <strong>Front-End Developer</strong> specializing in
-              React, Next.js, and Tailwind CSS, with a keen focus on crafting{' '}
-              <b>responsive</b> and visually <b>stunning</b> web applications.
+              I&apos;m a <strong>Full-Stack Developer</strong> with 3 years of
+              experience building production-ready <b>AI platforms</b>,
+              serverless backends, and complex frontends. I own features
+              end-to-end - from system design through release and monitoring.
             </p>
             <p>
-              I enjoy working in team and{' '}
-              <strong>transforming ideas into reality</strong>. Clear
-              communication, attention to detail, and a commitment to delivering{' '}
-              <b>high-quality</b> code are values I uphold in my works.
+              My work spans B2B SaaS, consumer search platforms, and AI-powered
+              products, with a strong focus on{' '}
+              <strong>edge infrastructure</strong>, multi-provider LLM
+              integrations, and clean, maintainable architecture. I mainly work
+              with React, TypeScript, Node.js, Cloudflare, and PostgreSQL.
             </p>
             <p>
-              If you&apos;re in search of a developer who is <b>well-versed</b>{' '}
-              in React, Next.js, and Tailwind CSS, and has a passion for
-              crafting <b>responsive</b> and <b>user-centric</b> applications,
-              I&apos;m eager to contribute my skills to your projects.
-              Let&apos;s collaborate and build digital experiences that leave a{' '}
-              <b>lasting impression</b>!
+              If you&apos;re looking for someone who can ship{' '}
+              <b>fast, reliable products at scale</b> - from frontend UX to
+              backend infrastructure and deployment workflows - I&apos;m ready
+              to contribute. Let&apos;s build something that lasts.
             </p>
           </div>
-          <Link
-            className={cn('mt-6', buttonVariants())}
-            download={CV_FILENAME}
-            href={`/${CV_FILENAME}${CV_FILE_EXTENSION}`}
-            rel="noreferrer"
-            target="_blank"
-          >
-            Download CV
-          </Link>
+          <DownloadCVButton className="mt-6" />
         </article>
         <TechnologyIcons className="self-start" />
       </Content>

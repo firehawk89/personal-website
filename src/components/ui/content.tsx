@@ -16,7 +16,7 @@ const contentVariants = cva('mx-auto h-full w-full', {
   },
 })
 
-interface ContentProps
+export interface ContentProps
   extends HTMLAttributes<HTMLDivElement>,
     VariantProps<typeof contentVariants> {}
 

@@ -11,12 +11,12 @@ export async function GET(request: Request) {
     const hasTitle = searchParams.has('title')
     const title = hasTitle
       ? searchParams.get('title')
-      : 'Anton Bochkovskyi - Front-End Developer'
+      : 'Anton Bochkovskyi - Full-Stack Developer'
 
     const hasDescription = searchParams.has('description')
     const description = hasDescription
       ? searchParams.get('description')
-      : 'Anton Bochkovskyi - Front-End Developer'
+      : 'Anton Bochkovskyi - Full-Stack Developer'
 
     const ralewaySemiBold = fetch(
       new URL('../../../../public/fonts/Raleway-SemiBold.ttf', import.meta.url)

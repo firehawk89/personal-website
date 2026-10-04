@@ -1,10 +1,13 @@
 import { FC, HTMLAttributes } from 'react'
-import { FaSass } from 'react-icons/fa'
 import {
+  SiCloudflare,
   SiCss3,
   SiHtml5,
   SiJavascript,
+  SiMongodb,
   SiNextdotjs,
+  SiNodedotjs,
+  SiPostgresql,
   SiReact,
   SiTailwindcss,
   SiTypescript,
@@ -20,35 +23,20 @@ const TechnologyIcons: FC<HTMLAttributes<HTMLUListElement>> = ({
   return (
     <ul
       className={cn(
-        'grid shrink-0 grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-6 md:gap-8 lg:grid-cols-3',
+        'grid shrink-0 grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-6 md:gap-8 lg:grid-cols-3',
         className
       )}
       {...props}
     >
       <TechnologyIconsItem
-        Icon={SiHtml5}
-        className="text-[#f15b29]"
-        title="HTML5"
-      />
-      <TechnologyIconsItem
-        Icon={SiCss3}
-        className="text-[#1775bb]"
-        title="CSS3"
+        Icon={SiTypescript}
+        className="bg-white text-[#2f74c0]"
+        title="TypeScript"
       />
       <TechnologyIconsItem
         Icon={SiJavascript}
         className="bg-black text-[#efd81d]"
         title="JavaScript"
-      />
-      <TechnologyIconsItem
-        Icon={FaSass}
-        className="text-[#c76494]"
-        title="Sass"
-      />
-      <TechnologyIconsItem
-        Icon={SiTailwindcss}
-        className="text-[#38bdf8]"
-        title="Tailwind CSS"
       />
       <TechnologyIconsItem
         Icon={SiReact}
@@ -61,9 +49,39 @@ const TechnologyIcons: FC<HTMLAttributes<HTMLUListElement>> = ({
         title="Next.js"
       />
       <TechnologyIconsItem
-        Icon={SiTypescript}
-        className="bg-white text-[#2f74c0]"
-        title="TypeScript"
+        Icon={SiTailwindcss}
+        className="text-[#38bdf8]"
+        title="Tailwind CSS"
+      />
+      <TechnologyIconsItem
+        Icon={SiNodedotjs}
+        className="text-[#539e43]"
+        title="Node.js"
+      />
+      <TechnologyIconsItem
+        Icon={SiCloudflare}
+        className="text-[#f6821f]"
+        title="Cloudflare"
+      />
+      <TechnologyIconsItem
+        Icon={SiPostgresql}
+        className="text-[#336791]"
+        title="PostgreSQL"
+      />
+      <TechnologyIconsItem
+        Icon={SiMongodb}
+        className="text-[#00ed64]"
+        title="MongoDB"
+      />
+      <TechnologyIconsItem
+        Icon={SiHtml5}
+        className="text-[#f15b29]"
+        title="HTML5"
+      />
+      <TechnologyIconsItem
+        Icon={SiCss3}
+        className="text-[#1775bb]"
+        title="CSS3"
       />
     </ul>
   )
