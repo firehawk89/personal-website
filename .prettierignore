@@ -1,5 +1,3 @@
-*.config.*
-.lintstagedrc.*
 node_modules/**
 .next/**
 dist/**

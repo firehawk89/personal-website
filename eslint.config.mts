@@ -1,8 +1,9 @@
 import js from '@eslint/js'
 import { defineConfig } from 'eslint/config'
-import nextConfig from '@next/eslint-plugin-next'
+import nextPlugin from '@next/eslint-plugin-next'
 import perfectionist from 'eslint-plugin-perfectionist'
-import pluginReact from 'eslint-plugin-react'
+import reactPlugin from 'eslint-plugin-react'
+import reactHooksPlugin from 'eslint-plugin-react-hooks'
 import globals from 'globals'
 import tseslint from 'typescript-eslint'
 import eslintConfigPrettier from 'eslint-config-prettier/flat'
@@ -23,19 +24,23 @@ export default defineConfig([
     settings: { react: { version: 'detect' } },
     rules: { ...js.configs.recommended.rules },
   },
+
   ...tseslint.configs.recommended,
-  pluginReact.configs.flat.recommended,
-  nextConfig.configs.recommended,
+
+  reactPlugin.configs.flat.recommended,
+  reactPlugin.configs.flat['jsx-runtime'],
+  reactHooksPlugin.configs.flat.recommended,
+
+  nextPlugin.configs.recommended,
+
   {
-    plugins: {
-      perfectionist,
-    },
+    plugins: { perfectionist },
     rules: {
       'perfectionist/sort-imports': 'error',
     },
   },
   eslintConfigPrettier,
-  { rules: { 'react/react-in-jsx-scope': 'off' } },
+
   {
     ignores: [
       'node_modules/**',
@@ -47,7 +52,7 @@ export default defineConfig([
       'pnpm-lock.yaml',
       'package-lock.json',
       'yarn.lock',
-	  '*.config.*',
+      '*.config.*',
       '.lintstagedrc.*',
     ],
   },
