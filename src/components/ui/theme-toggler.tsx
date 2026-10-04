@@ -1,24 +1,29 @@
 'use client'
 
 import { useTheme } from 'next-themes'
-import { FC, useEffect, useState } from 'react'
+import { FC, startTransition, useEffect, useState } from 'react'
 import { CiDark, CiLight } from 'react-icons/ci'
 
 import Button, { ButtonProps } from '@/components/ui/button'
 import Theme from '@/types/enums/Theme'
 
 const ThemeToggler: FC<ButtonProps> = ({ className, ...props }) => {
-  const [mounted, setMounted] = useState<boolean>(false)
+  const [isMounted, setIsMounted] = useState<boolean>(false)
   const { resolvedTheme, setTheme } = useTheme()
+
   const isDarkTheme = (resolvedTheme as Theme) === 'dark'
 
   const toggleTheme = () => (isDarkTheme ? setTheme('light') : setTheme('dark'))
 
-  useEffect(() => setMounted(true), [])
+  useEffect(() => {
+    startTransition(() => {
+      setIsMounted(true)
+    })
+  }, [])
 
   return (
     <>
-      {!mounted ? (
+      {!isMounted ? (
         <Button className={className} variant="icon" {...props}>
           <div className="h-7 w-7 animate-pulse rounded-full bg-neutral-200 dark:bg-neutral-700" />
         </Button>

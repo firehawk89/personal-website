@@ -1,6 +1,13 @@
 'use client'
 
-import { FC, ReactNode, useCallback, useEffect, useState } from 'react'
+import {
+  FC,
+  ReactNode,
+  startTransition,
+  useCallback,
+  useEffect,
+  useState,
+} from 'react'
 
 import useMediaQuery from '@/hooks/use-media-query'
 import HeaderContext from '@/store/header-context'
@@ -31,10 +38,14 @@ const HeaderProvider: FC<HeaderProviderProps> = ({ children }) => {
 
   useEffect(() => {
     if (isMobile) {
-      setIsMenuOpened(false)
-      setAllowToggle(true)
+      startTransition(() => {
+        setIsMenuOpened(false)
+        setAllowToggle(true)
+      })
     } else {
-      setAllowToggle(false)
+      startTransition(() => {
+        setAllowToggle(false)
+      })
     }
   }, [isMobile])
 

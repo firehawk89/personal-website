@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react'
+import { startTransition, useCallback, useEffect, useState } from 'react'
 
 interface MatchMediaChangeEvent extends Event {
   matches: boolean
@@ -22,7 +22,9 @@ const useMediaQuery = (width: number) => {
     media.addEventListener('change', updateTarget)
 
     if (media.matches) {
-      setTargetReached(true)
+      startTransition(() => {
+        setTargetReached(true)
+      })
     }
 
     return () => media.removeEventListener('change', updateTarget)
